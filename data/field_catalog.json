@@ -1,0 +1,5609 @@
+{
+  "@timestamp": {
+    "description": "Timestamp when the event was detected by Wazuh",
+    "type": "date",
+    "nl_phrases": [
+      "time",
+      "when",
+      "date",
+      "timestamp",
+      "occurred"
+    ],
+    "query_type": "range"
+  },
+  "@version": {
+    "description": "@version",
+    "type": "text",
+    "nl_phrases": [
+      "@version"
+    ],
+    "query_type": "match"
+  },
+  "GeoLocation.area_code": {
+    "description": "Geolocation area code",
+    "type": "long",
+    "nl_phrases": [
+      "geolocation area code",
+      "area code"
+    ],
+    "query_type": "range"
+  },
+  "GeoLocation.city_name": {
+    "description": "City name derived from IP geolocation",
+    "type": "keyword",
+    "nl_phrases": [
+      "city name",
+      "geolocation city name"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.continent_code": {
+    "description": "Geolocation continent code",
+    "type": "text",
+    "nl_phrases": [
+      "continent code",
+      "geolocation continent code"
+    ],
+    "query_type": "match"
+  },
+  "GeoLocation.coordinates": {
+    "description": "Geolocation coordinates",
+    "type": "double",
+    "nl_phrases": [
+      "coordinates",
+      "geolocation coordinates"
+    ],
+    "query_type": "range"
+  },
+  "GeoLocation.country_code2": {
+    "description": "Geolocation country code2",
+    "type": "text",
+    "nl_phrases": [
+      "geolocation country code2",
+      "country code2"
+    ],
+    "query_type": "match"
+  },
+  "GeoLocation.country_code3": {
+    "description": "Geolocation country code3",
+    "type": "text",
+    "nl_phrases": [
+      "country code3",
+      "geolocation country code3"
+    ],
+    "query_type": "match"
+  },
+  "GeoLocation.country_name": {
+    "description": "Country name derived from IP geolocation",
+    "type": "keyword",
+    "nl_phrases": [
+      "country",
+      "location",
+      "where",
+      "geography",
+      "origin country"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.dma_code": {
+    "description": "Geolocation dma code",
+    "type": "long",
+    "nl_phrases": [
+      "dma code",
+      "geolocation dma code"
+    ],
+    "query_type": "range"
+  },
+  "GeoLocation.ip": {
+    "description": "Geolocation ip",
+    "type": "keyword",
+    "nl_phrases": [
+      "geolocation ip",
+      "ip"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.latitude": {
+    "description": "Geolocation latitude",
+    "type": "double",
+    "nl_phrases": [
+      "geolocation latitude",
+      "latitude"
+    ],
+    "query_type": "range"
+  },
+  "GeoLocation.location": {
+    "description": "Geolocation location",
+    "type": "geo_point",
+    "nl_phrases": [
+      "location",
+      "geolocation location"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.longitude": {
+    "description": "Geolocation longitude",
+    "type": "double",
+    "nl_phrases": [
+      "longitude",
+      "geolocation longitude"
+    ],
+    "query_type": "range"
+  },
+  "GeoLocation.postal_code": {
+    "description": "Geolocation postal code",
+    "type": "keyword",
+    "nl_phrases": [
+      "postal code",
+      "geolocation postal code"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.real_region_name": {
+    "description": "Geolocation real region name",
+    "type": "keyword",
+    "nl_phrases": [
+      "real region name",
+      "geolocation real region name"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.region_name": {
+    "description": "Region name derived from IP geolocation",
+    "type": "keyword",
+    "nl_phrases": [
+      "geolocation region name",
+      "region name"
+    ],
+    "query_type": "term"
+  },
+  "GeoLocation.timezone": {
+    "description": "Geolocation timezone",
+    "type": "text",
+    "nl_phrases": [
+      "timezone",
+      "geolocation timezone"
+    ],
+    "query_type": "match"
+  },
+  "agent.id": {
+    "description": "Agent id",
+    "type": "keyword",
+    "nl_phrases": [
+      "agent id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "agent.ip": {
+    "description": "IP address of the Wazuh agent reporting the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "agent ip",
+      "sensor ip",
+      "wazuh agent"
+    ],
+    "query_type": "term"
+  },
+  "agent.name": {
+    "description": "Hostname of the Wazuh agent reporting the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "hostname",
+      "machine",
+      "computer",
+      "endpoint",
+      "host",
+      "agent"
+    ],
+    "query_type": "term"
+  },
+  "cluster.name": {
+    "description": "Cluster name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "cluster name"
+    ],
+    "query_type": "term"
+  },
+  "cluster.node": {
+    "description": "Cluster node",
+    "type": "keyword",
+    "nl_phrases": [
+      "node",
+      "cluster node"
+    ],
+    "query_type": "term"
+  },
+  "command": {
+    "description": "Command",
+    "type": "keyword",
+    "nl_phrases": [
+      "command"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.api_customer": {
+    "description": "Yara api customer",
+    "type": "keyword",
+    "nl_phrases": [
+      "yara api customer",
+      "api customer"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.log_type": {
+    "description": "Yara log type",
+    "type": "keyword",
+    "nl_phrases": [
+      "yara log type",
+      "log type"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.reference": {
+    "description": "Yara reference",
+    "type": "keyword",
+    "nl_phrases": [
+      "yara reference",
+      "reference"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.rule_author": {
+    "description": "Yara rule author",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule author",
+      "yara rule author"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.rule_description": {
+    "description": "Yara rule description",
+    "type": "keyword",
+    "nl_phrases": [
+      "yara rule description",
+      "rule description"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.rule_name": {
+    "description": "Yara rule name",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule name",
+      "yara rule name"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.scanned_file": {
+    "description": "Yara scanned file",
+    "type": "keyword",
+    "nl_phrases": [
+      "scanned file",
+      "yara scanned file"
+    ],
+    "query_type": "term"
+  },
+  "data.YARA.tags": {
+    "description": "Yara tags",
+    "type": "keyword",
+    "nl_phrases": [
+      "yara tags",
+      "tags"
+    ],
+    "query_type": "term"
+  },
+  "data.action": {
+    "description": "Action performed during the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "action",
+      "data action"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.acct": {
+    "description": "Audit acct",
+    "type": "keyword",
+    "nl_phrases": [
+      "acct",
+      "audit acct"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.arch": {
+    "description": "Audit arch",
+    "type": "keyword",
+    "nl_phrases": [
+      "arch",
+      "audit arch"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.auid": {
+    "description": "Audit auid",
+    "type": "keyword",
+    "nl_phrases": [
+      "auid",
+      "audit auid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.command": {
+    "description": "Audit command",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit command",
+      "command"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.cwd": {
+    "description": "Audit cwd",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit cwd",
+      "cwd"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.dev": {
+    "description": "Audit dev",
+    "type": "keyword",
+    "nl_phrases": [
+      "dev",
+      "audit dev"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.directory.inode": {
+    "description": "Directory inode",
+    "type": "keyword",
+    "nl_phrases": [
+      "inode",
+      "directory inode"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.directory.mode": {
+    "description": "Directory mode",
+    "type": "keyword",
+    "nl_phrases": [
+      "directory mode",
+      "mode"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.directory.name": {
+    "description": "Directory name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "directory name"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.egid": {
+    "description": "Audit egid",
+    "type": "keyword",
+    "nl_phrases": [
+      "egid",
+      "audit egid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.enforcing": {
+    "description": "Audit enforcing",
+    "type": "keyword",
+    "nl_phrases": [
+      "enforcing",
+      "audit enforcing"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.euid": {
+    "description": "Audit euid",
+    "type": "keyword",
+    "nl_phrases": [
+      "euid",
+      "audit euid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.exe": {
+    "description": "Audit exe",
+    "type": "keyword",
+    "nl_phrases": [
+      "exe",
+      "audit exe"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.execve.a0": {
+    "description": "Execve a0",
+    "type": "keyword",
+    "nl_phrases": [
+      "execve a0",
+      "a0"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.execve.a1": {
+    "description": "Execve a1",
+    "type": "keyword",
+    "nl_phrases": [
+      "a1",
+      "execve a1"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.execve.a2": {
+    "description": "Execve a2",
+    "type": "keyword",
+    "nl_phrases": [
+      "a2",
+      "execve a2"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.execve.a3": {
+    "description": "Execve a3",
+    "type": "keyword",
+    "nl_phrases": [
+      "execve a3",
+      "a3"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.exit": {
+    "description": "Audit exit",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit exit",
+      "exit"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.file.inode": {
+    "description": "File inode",
+    "type": "keyword",
+    "nl_phrases": [
+      "inode",
+      "file inode"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.file.mode": {
+    "description": "File mode",
+    "type": "keyword",
+    "nl_phrases": [
+      "file mode",
+      "mode"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.file.name": {
+    "description": "File name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "file name"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.fsgid": {
+    "description": "Audit fsgid",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit fsgid",
+      "fsgid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.fsuid": {
+    "description": "Audit fsuid",
+    "type": "keyword",
+    "nl_phrases": [
+      "fsuid",
+      "audit fsuid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.gid": {
+    "description": "Audit gid",
+    "type": "keyword",
+    "nl_phrases": [
+      "gid",
+      "audit gid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.id": {
+    "description": "Audit id",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.key": {
+    "description": "Audit key",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit key",
+      "key"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.list": {
+    "description": "Audit list",
+    "type": "keyword",
+    "nl_phrases": [
+      "list",
+      "audit list"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.old-auid": {
+    "description": "Audit old-auid",
+    "type": "keyword",
+    "nl_phrases": [
+      "old-auid",
+      "audit old-auid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.old-ses": {
+    "description": "Audit old-ses",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit old-ses",
+      "old-ses"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.old_enforcing": {
+    "description": "Audit old enforcing",
+    "type": "keyword",
+    "nl_phrases": [
+      "old enforcing",
+      "audit old enforcing"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.old_prom": {
+    "description": "Audit old prom",
+    "type": "keyword",
+    "nl_phrases": [
+      "old prom",
+      "audit old prom"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.op": {
+    "description": "Audit op",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit op",
+      "op"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.pid": {
+    "description": "Audit pid",
+    "type": "keyword",
+    "nl_phrases": [
+      "pid",
+      "audit pid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.ppid": {
+    "description": "Audit ppid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ppid",
+      "audit ppid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.prom": {
+    "description": "Audit prom",
+    "type": "keyword",
+    "nl_phrases": [
+      "prom",
+      "audit prom"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.res": {
+    "description": "Audit res",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit res",
+      "res"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.session": {
+    "description": "Audit session",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit session",
+      "session"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.sgid": {
+    "description": "Audit sgid",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit sgid",
+      "sgid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.srcip": {
+    "description": "Audit srcip",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit srcip",
+      "srcip"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.subj": {
+    "description": "Audit subj",
+    "type": "keyword",
+    "nl_phrases": [
+      "subj",
+      "audit subj"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.success": {
+    "description": "Audit success",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit success",
+      "success"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.suid": {
+    "description": "Audit suid",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit suid",
+      "suid"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.syscall": {
+    "description": "Audit syscall",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscall",
+      "audit syscall"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.tty": {
+    "description": "Audit tty",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit tty",
+      "tty"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.type": {
+    "description": "Audit type",
+    "type": "keyword",
+    "nl_phrases": [
+      "type",
+      "audit type"
+    ],
+    "query_type": "term"
+  },
+  "data.audit.uid": {
+    "description": "Audit uid",
+    "type": "keyword",
+    "nl_phrases": [
+      "audit uid",
+      "uid"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.accountId": {
+    "description": "Aws accountid",
+    "type": "keyword",
+    "nl_phrases": [
+      "aws accountid",
+      "accountid"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.bytes": {
+    "description": "Aws bytes",
+    "type": "long",
+    "nl_phrases": [
+      "aws bytes",
+      "bytes"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.createdAt": {
+    "description": "Aws createdat",
+    "type": "date",
+    "nl_phrases": [
+      "createdat",
+      "date",
+      "aws createdat",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.dstaddr": {
+    "description": "Aws dstaddr",
+    "type": "ip",
+    "nl_phrases": [
+      "dstaddr",
+      "network address",
+      "aws dstaddr",
+      "ip address"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.end": {
+    "description": "Aws end",
+    "type": "date",
+    "nl_phrases": [
+      "end",
+      "date",
+      "aws end",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.log_info.s3bucket": {
+    "description": "Log info s3bucket",
+    "type": "keyword",
+    "nl_phrases": [
+      "s3bucket",
+      "log info s3bucket"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.region": {
+    "description": "Aws region",
+    "type": "keyword",
+    "nl_phrases": [
+      "region",
+      "aws region"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.resource.instanceDetails.launchTime": {
+    "description": "Instancedetails launchtime",
+    "type": "date",
+    "nl_phrases": [
+      "launchtime",
+      "date",
+      "time",
+      "when",
+      "instancedetails launchtime"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.resource.instanceDetails.networkInterfaces.privateIpAddress": {
+    "description": "Networkinterfaces privateipaddress",
+    "type": "ip",
+    "nl_phrases": [
+      "privateipaddress",
+      "ip address",
+      "network address",
+      "networkinterfaces privateipaddress"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.resource.instanceDetails.networkInterfaces.publicIp": {
+    "description": "Networkinterfaces publicip",
+    "type": "ip",
+    "nl_phrases": [
+      "networkinterfaces publicip",
+      "network address",
+      "publicip",
+      "ip address"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.service.action.networkConnectionAction.remoteIpDetails.geoLocation": {
+    "description": "Remoteipdetails geolocation",
+    "type": "geo_point",
+    "nl_phrases": [
+      "geolocation",
+      "remoteipdetails geolocation"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.service.action.networkConnectionAction.remoteIpDetails.ipAddressV4": {
+    "description": "Remoteipdetails ipaddressv4",
+    "type": "ip",
+    "nl_phrases": [
+      "ipaddressv4",
+      "ip address",
+      "network address",
+      "remoteipdetails ipaddressv4"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.service.count": {
+    "description": "Service count",
+    "type": "long",
+    "nl_phrases": [
+      "count",
+      "service count"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.service.eventFirstSeen": {
+    "description": "Service eventfirstseen",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "service eventfirstseen",
+      "eventfirstseen",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.service.eventLastSeen": {
+    "description": "Service eventlastseen",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "eventlastseen",
+      "service eventlastseen",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.source": {
+    "description": "Aws source",
+    "type": "keyword",
+    "nl_phrases": [
+      "source",
+      "aws source"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.source_ip_address": {
+    "description": "Aws source ip address",
+    "type": "ip",
+    "nl_phrases": [
+      "aws source ip address",
+      "network address",
+      "source ip address",
+      "ip address"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.srcaddr": {
+    "description": "Aws srcaddr",
+    "type": "ip",
+    "nl_phrases": [
+      "srcaddr",
+      "network address",
+      "ip address",
+      "aws srcaddr"
+    ],
+    "query_type": "term"
+  },
+  "data.aws.start": {
+    "description": "Aws start",
+    "type": "date",
+    "nl_phrases": [
+      "start",
+      "date",
+      "aws start",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.aws.updatedAt": {
+    "description": "Aws updatedat",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "time",
+      "aws updatedat",
+      "when",
+      "updatedat"
+    ],
+    "query_type": "range"
+  },
+  "data.azureSignInStatus.additionalDetails": {
+    "description": "Azuresigninstatus additionaldetails",
+    "type": "keyword",
+    "nl_phrases": [
+      "azuresigninstatus additionaldetails",
+      "additionaldetails"
+    ],
+    "query_type": "term"
+  },
+  "data.azureSignInStatus.errorCode": {
+    "description": "Azuresigninstatus errorcode",
+    "type": "integer",
+    "nl_phrases": [
+      "errorcode",
+      "azuresigninstatus errorcode"
+    ],
+    "query_type": "range"
+  },
+  "data.azureSignInStatus.failureReason": {
+    "description": "Azuresigninstatus failurereason",
+    "type": "keyword",
+    "nl_phrases": [
+      "failurereason",
+      "azuresigninstatus failurereason"
+    ],
+    "query_type": "term"
+  },
+  "data.cis.benchmark": {
+    "description": "Cis benchmark",
+    "type": "keyword",
+    "nl_phrases": [
+      "cis benchmark",
+      "benchmark"
+    ],
+    "query_type": "term"
+  },
+  "data.cis.error": {
+    "description": "Cis error",
+    "type": "long",
+    "nl_phrases": [
+      "cis error",
+      "error"
+    ],
+    "query_type": "range"
+  },
+  "data.cis.fail": {
+    "description": "Cis fail",
+    "type": "long",
+    "nl_phrases": [
+      "cis fail",
+      "fail"
+    ],
+    "query_type": "range"
+  },
+  "data.cis.group": {
+    "description": "Cis group",
+    "type": "keyword",
+    "nl_phrases": [
+      "cis group",
+      "group"
+    ],
+    "query_type": "term"
+  },
+  "data.cis.notchecked": {
+    "description": "Cis notchecked",
+    "type": "long",
+    "nl_phrases": [
+      "notchecked",
+      "cis notchecked"
+    ],
+    "query_type": "range"
+  },
+  "data.cis.pass": {
+    "description": "Cis pass",
+    "type": "long",
+    "nl_phrases": [
+      "cis pass",
+      "pass"
+    ],
+    "query_type": "range"
+  },
+  "data.cis.result": {
+    "description": "Cis result",
+    "type": "keyword",
+    "nl_phrases": [
+      "cis result",
+      "result"
+    ],
+    "query_type": "term"
+  },
+  "data.cis.rule_title": {
+    "description": "Cis rule title",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule title",
+      "cis rule title"
+    ],
+    "query_type": "term"
+  },
+  "data.cis.score": {
+    "description": "Cis score",
+    "type": "long",
+    "nl_phrases": [
+      "cis score",
+      "score"
+    ],
+    "query_type": "range"
+  },
+  "data.cis.timestamp": {
+    "description": "Cis timestamp",
+    "type": "keyword",
+    "nl_phrases": [
+      "timestamp",
+      "cis timestamp"
+    ],
+    "query_type": "term"
+  },
+  "data.cis.unknown": {
+    "description": "Cis unknown",
+    "type": "long",
+    "nl_phrases": [
+      "unknown",
+      "cis unknown"
+    ],
+    "query_type": "range"
+  },
+  "data.command": {
+    "description": "Data command",
+    "type": "keyword",
+    "nl_phrases": [
+      "data command",
+      "command"
+    ],
+    "query_type": "term"
+  },
+  "data.data": {
+    "description": "Data data",
+    "type": "keyword",
+    "nl_phrases": [
+      "data data",
+      "data"
+    ],
+    "query_type": "term"
+  },
+  "data.docker.Action": {
+    "description": "Docker action",
+    "type": "keyword",
+    "nl_phrases": [
+      "action",
+      "docker action"
+    ],
+    "query_type": "term"
+  },
+  "data.docker.Actor.Attributes.image": {
+    "description": "Attributes image",
+    "type": "keyword",
+    "nl_phrases": [
+      "image",
+      "attributes image"
+    ],
+    "query_type": "term"
+  },
+  "data.docker.Actor.Attributes.name": {
+    "description": "Attributes name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "attributes name"
+    ],
+    "query_type": "term"
+  },
+  "data.docker.Type": {
+    "description": "Docker type",
+    "type": "keyword",
+    "nl_phrases": [
+      "type",
+      "docker type"
+    ],
+    "query_type": "term"
+  },
+  "data.docker.from": {
+    "description": "Docker from",
+    "type": "keyword",
+    "nl_phrases": [
+      "docker from",
+      "from"
+    ],
+    "query_type": "term"
+  },
+  "data.dstip": {
+    "description": "Destination IP address targeted by the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "destination ip",
+      "target ip",
+      "server ip",
+      "victim ip"
+    ],
+    "query_type": "term"
+  },
+  "data.dstport": {
+    "description": "Destination port number",
+    "type": "keyword",
+    "nl_phrases": [
+      "data dstport",
+      "dstport"
+    ],
+    "query_type": "term"
+  },
+  "data.dstuser": {
+    "description": "Data dstuser",
+    "type": "keyword",
+    "nl_phrases": [
+      "data dstuser",
+      "dstuser"
+    ],
+    "query_type": "term"
+  },
+  "data.extra_data": {
+    "description": "Data extra data",
+    "type": "keyword",
+    "nl_phrases": [
+      "data extra data",
+      "extra data"
+    ],
+    "query_type": "term"
+  },
+  "data.file": {
+    "description": "Data file",
+    "type": "keyword",
+    "nl_phrases": [
+      "data file",
+      "file"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.jsonPayload.authAnswer": {
+    "description": "Jsonpayload authanswer",
+    "type": "keyword",
+    "nl_phrases": [
+      "authanswer",
+      "jsonpayload authanswer"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.jsonPayload.queryName": {
+    "description": "Jsonpayload queryname",
+    "type": "keyword",
+    "nl_phrases": [
+      "queryname",
+      "jsonpayload queryname"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.jsonPayload.responseCode": {
+    "description": "Jsonpayload responsecode",
+    "type": "keyword",
+    "nl_phrases": [
+      "responsecode",
+      "jsonpayload responsecode"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.jsonPayload.vmInstanceId": {
+    "description": "Jsonpayload vminstanceid",
+    "type": "keyword",
+    "nl_phrases": [
+      "vminstanceid",
+      "jsonpayload vminstanceid"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.jsonPayload.vmInstanceName": {
+    "description": "Jsonpayload vminstancename",
+    "type": "keyword",
+    "nl_phrases": [
+      "vminstancename",
+      "jsonpayload vminstancename"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.resource.labels.location": {
+    "description": "Labels location",
+    "type": "keyword",
+    "nl_phrases": [
+      "labels location",
+      "location"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.resource.labels.project_id": {
+    "description": "Labels project id",
+    "type": "keyword",
+    "nl_phrases": [
+      "project id",
+      "labels project id"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.resource.labels.source_type": {
+    "description": "Labels source type",
+    "type": "keyword",
+    "nl_phrases": [
+      "source type",
+      "labels source type"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.resource.type": {
+    "description": "Resource type",
+    "type": "keyword",
+    "nl_phrases": [
+      "resource type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.gcp.severity": {
+    "description": "Gcp severity",
+    "type": "keyword",
+    "nl_phrases": [
+      "gcp severity",
+      "severity"
+    ],
+    "query_type": "term"
+  },
+  "data.github.action": {
+    "description": "Github action",
+    "type": "keyword",
+    "nl_phrases": [
+      "action",
+      "github action"
+    ],
+    "query_type": "term"
+  },
+  "data.github.actor": {
+    "description": "Github actor",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor",
+      "github actor"
+    ],
+    "query_type": "term"
+  },
+  "data.github.actor_location.country_code": {
+    "description": "Actor location country code",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor location country code",
+      "country code"
+    ],
+    "query_type": "term"
+  },
+  "data.github.org": {
+    "description": "Github org",
+    "type": "keyword",
+    "nl_phrases": [
+      "org",
+      "github org"
+    ],
+    "query_type": "term"
+  },
+  "data.github.repo": {
+    "description": "Github repo",
+    "type": "keyword",
+    "nl_phrases": [
+      "github repo",
+      "repo"
+    ],
+    "query_type": "term"
+  },
+  "data.hardware.cpu_cores": {
+    "description": "Hardware cpu cores",
+    "type": "long",
+    "nl_phrases": [
+      "cpu cores",
+      "hardware cpu cores"
+    ],
+    "query_type": "range"
+  },
+  "data.hardware.cpu_mhz": {
+    "description": "Hardware cpu mhz",
+    "type": "double",
+    "nl_phrases": [
+      "cpu mhz",
+      "hardware cpu mhz"
+    ],
+    "query_type": "range"
+  },
+  "data.hardware.cpu_name": {
+    "description": "Hardware cpu name",
+    "type": "keyword",
+    "nl_phrases": [
+      "cpu name",
+      "hardware cpu name"
+    ],
+    "query_type": "term"
+  },
+  "data.hardware.ram_free": {
+    "description": "Hardware ram free",
+    "type": "long",
+    "nl_phrases": [
+      "hardware ram free",
+      "ram free"
+    ],
+    "query_type": "range"
+  },
+  "data.hardware.ram_total": {
+    "description": "Hardware ram total",
+    "type": "long",
+    "nl_phrases": [
+      "hardware ram total",
+      "ram total"
+    ],
+    "query_type": "range"
+  },
+  "data.hardware.ram_usage": {
+    "description": "Hardware ram usage",
+    "type": "long",
+    "nl_phrases": [
+      "hardware ram usage",
+      "ram usage"
+    ],
+    "query_type": "range"
+  },
+  "data.hardware.serial": {
+    "description": "Hardware serial",
+    "type": "keyword",
+    "nl_phrases": [
+      "serial",
+      "hardware serial"
+    ],
+    "query_type": "term"
+  },
+  "data.id": {
+    "description": "Data id",
+    "type": "keyword",
+    "nl_phrases": [
+      "data id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.integration": {
+    "description": "Data integration",
+    "type": "keyword",
+    "nl_phrases": [
+      "data integration",
+      "integration"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.activationLockBypassCode": {
+    "description": "Ms-graph activationlockbypasscode",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph activationlockbypasscode",
+      "activationlockbypasscode"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.activity": {
+    "description": "Ms-graph activity",
+    "type": "keyword",
+    "nl_phrases": [
+      "activity",
+      "ms-graph activity"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.activityDateTime": {
+    "description": "Ms-graph activitydatetime",
+    "type": "date",
+    "nl_phrases": [
+      "activitydatetime",
+      "date",
+      "ms-graph activitydatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.activityOperationType": {
+    "description": "Ms-graph activityoperationtype",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph activityoperationtype",
+      "activityoperationtype"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.activityResult": {
+    "description": "Ms-graph activityresult",
+    "type": "keyword",
+    "nl_phrases": [
+      "activityresult",
+      "ms-graph activityresult"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.activityType": {
+    "description": "Ms-graph activitytype",
+    "type": "keyword",
+    "nl_phrases": [
+      "activitytype",
+      "ms-graph activitytype"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.applicationDisplayName": {
+    "description": "Actor applicationdisplayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "applicationdisplayname",
+      "actor applicationdisplayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.applicationId": {
+    "description": "Actor applicationid",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor applicationid",
+      "applicationid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.auditActorType": {
+    "description": "Actor auditactortype",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor auditactortype",
+      "auditactortype"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.ipAddress": {
+    "description": "Actor ipaddress",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor ipaddress",
+      "ipaddress"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.servicePrincipalName": {
+    "description": "Actor serviceprincipalname",
+    "type": "keyword",
+    "nl_phrases": [
+      "serviceprincipalname",
+      "actor serviceprincipalname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.type": {
+    "description": "Actor type",
+    "type": "keyword",
+    "nl_phrases": [
+      "type",
+      "actor type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.userId": {
+    "description": "Actor userid",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor userid",
+      "userid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actor.userPermissions": {
+    "description": "Actor userpermissions",
+    "type": "text",
+    "nl_phrases": [
+      "actor userpermissions",
+      "userpermissions"
+    ],
+    "query_type": "match"
+  },
+  "data.ms-graph.actor.userPrincipalName": {
+    "description": "Actor userprincipalname",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor userprincipalname",
+      "userprincipalname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.actorDisplayName": {
+    "description": "Ms-graph actordisplayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "actordisplayname",
+      "ms-graph actordisplayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.alertWebUrl": {
+    "description": "Ms-graph alertweburl",
+    "type": "keyword",
+    "nl_phrases": [
+      "alertweburl",
+      "ms-graph alertweburl"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.androidSecurityPatchLevel": {
+    "description": "Ms-graph androidsecuritypatchlevel",
+    "type": "keyword",
+    "nl_phrases": [
+      "androidsecuritypatchlevel",
+      "ms-graph androidsecuritypatchlevel"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.appliedConditionalAccessPolicies": {
+    "description": "Ms-graph appliedconditionalaccesspolicies",
+    "type": "keyword",
+    "nl_phrases": [
+      "appliedconditionalaccesspolicies",
+      "ms-graph appliedconditionalaccesspolicies"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.assignedTo": {
+    "description": "Ms-graph assignedto",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph assignedto",
+      "assignedto"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.azureADDeviceId": {
+    "description": "Ms-graph azureaddeviceid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph azureaddeviceid",
+      "azureaddeviceid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.azureADRegistered": {
+    "description": "Ms-graph azureadregistered",
+    "type": "keyword",
+    "nl_phrases": [
+      "azureadregistered",
+      "ms-graph azureadregistered"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.category": {
+    "description": "Ms-graph category",
+    "type": "keyword",
+    "nl_phrases": [
+      "category",
+      "ms-graph category"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.classification": {
+    "description": "Ms-graph classification",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph classification",
+      "classification"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.comments": {
+    "description": "Ms-graph comments",
+    "type": "keyword",
+    "nl_phrases": [
+      "comments",
+      "ms-graph comments"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.complianceGracePeriodExpirationDateTime": {
+    "description": "Ms-graph compliancegraceperiodexpirationdatetime",
+    "type": "date",
+    "nl_phrases": [
+      "compliancegraceperiodexpirationdatetime",
+      "ms-graph compliancegraceperiodexpirationdatetime",
+      "date",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.complianceState": {
+    "description": "Ms-graph compliancestate",
+    "type": "keyword",
+    "nl_phrases": [
+      "compliancestate",
+      "ms-graph compliancestate"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.componentName": {
+    "description": "Ms-graph componentname",
+    "type": "keyword",
+    "nl_phrases": [
+      "componentname",
+      "ms-graph componentname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.compliancePolicy": {
+    "description": "Configurationmanagerclientenabledfeatures compliancepolicy",
+    "type": "keyword",
+    "nl_phrases": [
+      "compliancepolicy",
+      "configurationmanagerclientenabledfeatures compliancepolicy"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.deviceConfiguration": {
+    "description": "Configurationmanagerclientenabledfeatures deviceconfiguration",
+    "type": "keyword",
+    "nl_phrases": [
+      "deviceconfiguration",
+      "configurationmanagerclientenabledfeatures deviceconfiguration"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.inventory": {
+    "description": "Configurationmanagerclientenabledfeatures inventory",
+    "type": "keyword",
+    "nl_phrases": [
+      "inventory",
+      "configurationmanagerclientenabledfeatures inventory"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.modernApps": {
+    "description": "Configurationmanagerclientenabledfeatures modernapps",
+    "type": "keyword",
+    "nl_phrases": [
+      "modernapps",
+      "configurationmanagerclientenabledfeatures modernapps"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.resourceAccess": {
+    "description": "Configurationmanagerclientenabledfeatures resourceaccess",
+    "type": "keyword",
+    "nl_phrases": [
+      "resourceaccess",
+      "configurationmanagerclientenabledfeatures resourceaccess"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.configurationManagerClientEnabledFeatures.windowsUpdateForBusiness": {
+    "description": "Configurationmanagerclientenabledfeatures windowsupdateforbusiness",
+    "type": "keyword",
+    "nl_phrases": [
+      "windowsupdateforbusiness",
+      "configurationmanagerclientenabledfeatures windowsupdateforbusiness"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.correlationId": {
+    "description": "Ms-graph correlationid",
+    "type": "keyword",
+    "nl_phrases": [
+      "correlationid",
+      "ms-graph correlationid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.createdDateTime": {
+    "description": "Ms-graph createddatetime",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "createddatetime",
+      "ms-graph createddatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.description": {
+    "description": "Ms-graph description",
+    "type": "text",
+    "nl_phrases": [
+      "description",
+      "ms-graph description"
+    ],
+    "query_type": "match"
+  },
+  "data.ms-graph.detectionSource": {
+    "description": "Ms-graph detectionsource",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph detectionsource",
+      "detectionsource"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.detectorId": {
+    "description": "Ms-graph detectorid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph detectorid",
+      "detectorid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.determination": {
+    "description": "Ms-graph determination",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph determination",
+      "determination"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceActionResults.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceActionResults.actionName": {
+    "description": "Deviceactionresults actionname",
+    "type": "keyword",
+    "nl_phrases": [
+      "deviceactionresults actionname",
+      "actionname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceActionResults.actionState": {
+    "description": "Deviceactionresults actionstate",
+    "type": "keyword",
+    "nl_phrases": [
+      "actionstate",
+      "deviceactionresults actionstate"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceActionResults.lastUpdatedDateTime": {
+    "description": "Deviceactionresults lastupdateddatetime",
+    "type": "date",
+    "nl_phrases": [
+      "lastupdateddatetime",
+      "date",
+      "deviceactionresults lastupdateddatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.deviceActionResults.startDateTime": {
+    "description": "Deviceactionresults startdatetime",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "startdatetime",
+      "deviceactionresults startdatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.deviceCategoryDisplayName": {
+    "description": "Ms-graph devicecategorydisplayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph devicecategorydisplayname",
+      "devicecategorydisplayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceCount": {
+    "description": "Ms-graph devicecount",
+    "type": "integer",
+    "nl_phrases": [
+      "ms-graph devicecount",
+      "devicecount"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.deviceEnrollmentType": {
+    "description": "Ms-graph deviceenrollmenttype",
+    "type": "keyword",
+    "nl_phrases": [
+      "deviceenrollmenttype",
+      "ms-graph deviceenrollmenttype"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.attestationIdentityKey": {
+    "description": "Devicehealthattestationstate attestationidentitykey",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate attestationidentitykey",
+      "attestationidentitykey"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.bitLockerStatus": {
+    "description": "Devicehealthattestationstate bitlockerstatus",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate bitlockerstatus",
+      "bitlockerstatus"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.bootAppSecurityVersion": {
+    "description": "Devicehealthattestationstate bootappsecurityversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "bootappsecurityversion",
+      "devicehealthattestationstate bootappsecurityversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.bootDebugging": {
+    "description": "Devicehealthattestationstate bootdebugging",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate bootdebugging",
+      "bootdebugging"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.bootManagerSecurityVersion": {
+    "description": "Devicehealthattestationstate bootmanagersecurityversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate bootmanagersecurityversion",
+      "bootmanagersecurityversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.bootManagerVersion": {
+    "description": "Devicehealthattestationstate bootmanagerversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate bootmanagerversion",
+      "bootmanagerversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.bootRevisionListInfo": {
+    "description": "Devicehealthattestationstate bootrevisionlistinfo",
+    "type": "keyword",
+    "nl_phrases": [
+      "bootrevisionlistinfo",
+      "devicehealthattestationstate bootrevisionlistinfo"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.codeIntegrity": {
+    "description": "Devicehealthattestationstate codeintegrity",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate codeintegrity",
+      "codeintegrity"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.codeIntegrityCheckVersion": {
+    "description": "Devicehealthattestationstate codeintegritycheckversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate codeintegritycheckversion",
+      "codeintegritycheckversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.codeIntegrityPolicy": {
+    "description": "Devicehealthattestationstate codeintegritypolicy",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate codeintegritypolicy",
+      "codeintegritypolicy"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.contentNamespaceUrl": {
+    "description": "Devicehealthattestationstate contentnamespaceurl",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate contentnamespaceurl",
+      "contentnamespaceurl"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.contentVersion": {
+    "description": "Devicehealthattestationstate contentversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate contentversion",
+      "contentversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.dataExcutionPolicy": {
+    "description": "Devicehealthattestationstate dataexcutionpolicy",
+    "type": "keyword",
+    "nl_phrases": [
+      "dataexcutionpolicy",
+      "devicehealthattestationstate dataexcutionpolicy"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.deviceHealthAttestationStatus": {
+    "description": "Devicehealthattestationstate devicehealthattestationstatus",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstatus",
+      "devicehealthattestationstate devicehealthattestationstatus"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.earlyLaunchAntiMalwareDriverProtection": {
+    "description": "Devicehealthattestationstate earlylaunchantimalwaredriverprotection",
+    "type": "keyword",
+    "nl_phrases": [
+      "earlylaunchantimalwaredriverprotection",
+      "devicehealthattestationstate earlylaunchantimalwaredriverprotection"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.healthAttestationSupportedStatus": {
+    "description": "Devicehealthattestationstate healthattestationsupportedstatus",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate healthattestationsupportedstatus",
+      "healthattestationsupportedstatus"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.healthStatusMismatchInfo": {
+    "description": "Devicehealthattestationstate healthstatusmismatchinfo",
+    "type": "keyword",
+    "nl_phrases": [
+      "healthstatusmismatchinfo",
+      "devicehealthattestationstate healthstatusmismatchinfo"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.issuedDateTime": {
+    "description": "Devicehealthattestationstate issueddatetime",
+    "type": "date",
+    "nl_phrases": [
+      "issueddatetime",
+      "devicehealthattestationstate issueddatetime",
+      "date",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.deviceHealthAttestationState.lastUpdateDateTime": {
+    "description": "Devicehealthattestationstate lastupdatedatetime",
+    "type": "date",
+    "nl_phrases": [
+      "lastupdatedatetime",
+      "date",
+      "devicehealthattestationstate lastupdatedatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.deviceHealthAttestationState.operatingSystemKernelDebugging": {
+    "description": "Devicehealthattestationstate operatingsystemkerneldebugging",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate operatingsystemkerneldebugging",
+      "operatingsystemkerneldebugging"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.operatingSystemRevListInfo": {
+    "description": "Devicehealthattestationstate operatingsystemrevlistinfo",
+    "type": "keyword",
+    "nl_phrases": [
+      "operatingsystemrevlistinfo",
+      "devicehealthattestationstate operatingsystemrevlistinfo"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.pcr0": {
+    "description": "Devicehealthattestationstate pcr0",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate pcr0",
+      "pcr0"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.pcrHashAlgorithm": {
+    "description": "Devicehealthattestationstate pcrhashalgorithm",
+    "type": "keyword",
+    "nl_phrases": [
+      "pcrhashalgorithm",
+      "devicehealthattestationstate pcrhashalgorithm"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.resetCount": {
+    "description": "Devicehealthattestationstate resetcount",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate resetcount",
+      "resetcount"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.restartCount": {
+    "description": "Devicehealthattestationstate restartcount",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate restartcount",
+      "restartcount"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.safeMode": {
+    "description": "Devicehealthattestationstate safemode",
+    "type": "keyword",
+    "nl_phrases": [
+      "safemode",
+      "devicehealthattestationstate safemode"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.secureBoot": {
+    "description": "Devicehealthattestationstate secureboot",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate secureboot",
+      "secureboot"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.secureBootConfigurationPolicyFingerPrint": {
+    "description": "Devicehealthattestationstate securebootconfigurationpolicyfingerprint",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicehealthattestationstate securebootconfigurationpolicyfingerprint",
+      "securebootconfigurationpolicyfingerprint"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.testSigning": {
+    "description": "Devicehealthattestationstate testsigning",
+    "type": "keyword",
+    "nl_phrases": [
+      "testsigning",
+      "devicehealthattestationstate testsigning"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.tpmVersion": {
+    "description": "Devicehealthattestationstate tpmversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "tpmversion",
+      "devicehealthattestationstate tpmversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.virtualSecureMode": {
+    "description": "Devicehealthattestationstate virtualsecuremode",
+    "type": "keyword",
+    "nl_phrases": [
+      "virtualsecuremode",
+      "devicehealthattestationstate virtualsecuremode"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceHealthAttestationState.windowsPE": {
+    "description": "Devicehealthattestationstate windowspe",
+    "type": "keyword",
+    "nl_phrases": [
+      "windowspe",
+      "devicehealthattestationstate windowspe"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceName": {
+    "description": "Ms-graph devicename",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicename",
+      "ms-graph devicename"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.deviceRegistrationState": {
+    "description": "Ms-graph deviceregistrationstate",
+    "type": "keyword",
+    "nl_phrases": [
+      "deviceregistrationstate",
+      "ms-graph deviceregistrationstate"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.displayName": {
+    "description": "Ms-graph displayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "displayname",
+      "ms-graph displayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.easActivated": {
+    "description": "Ms-graph easactivated",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph easactivated",
+      "easactivated"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.easActivationDateTime": {
+    "description": "Ms-graph easactivationdatetime",
+    "type": "date",
+    "nl_phrases": [
+      "easactivationdatetime",
+      "ms-graph easactivationdatetime",
+      "date",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.easDeviceId": {
+    "description": "Ms-graph easdeviceid",
+    "type": "keyword",
+    "nl_phrases": [
+      "easdeviceid",
+      "ms-graph easdeviceid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.emailAddress": {
+    "description": "Ms-graph emailaddress",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph emailaddress",
+      "emailaddress"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.enrolledDateTime": {
+    "description": "Ms-graph enrolleddatetime",
+    "type": "date",
+    "nl_phrases": [
+      "enrolleddatetime",
+      "ms-graph enrolleddatetime",
+      "date",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.enrollmentProfileName": {
+    "description": "Ms-graph enrollmentprofilename",
+    "type": "keyword",
+    "nl_phrases": [
+      "enrollmentprofilename",
+      "ms-graph enrollmentprofilename"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.ethernetMacAddress": {
+    "description": "Ms-graph ethernetmacaddress",
+    "type": "keyword",
+    "nl_phrases": [
+      "ethernetmacaddress",
+      "ms-graph ethernetmacaddress"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.evidence._comment": {
+    "description": "Evidence  comment",
+    "type": "keyword",
+    "nl_phrases": [
+      " comment",
+      "evidence  comment"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.exchangeAccessState": {
+    "description": "Ms-graph exchangeaccessstate",
+    "type": "keyword",
+    "nl_phrases": [
+      "exchangeaccessstate",
+      "ms-graph exchangeaccessstate"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.exchangeAccessStateReason": {
+    "description": "Ms-graph exchangeaccessstatereason",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph exchangeaccessstatereason",
+      "exchangeaccessstatereason"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.exchangeLastSuccessfulSyncDateTime": {
+    "description": "Ms-graph exchangelastsuccessfulsyncdatetime",
+    "type": "date",
+    "nl_phrases": [
+      "exchangelastsuccessfulsyncdatetime",
+      "date",
+      "ms-graph exchangelastsuccessfulsyncdatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.firstActivityDateTime": {
+    "description": "Ms-graph firstactivitydatetime",
+    "type": "date",
+    "nl_phrases": [
+      "firstactivitydatetime",
+      "ms-graph firstactivitydatetime",
+      "date",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.freeStorageSpaceInBytes": {
+    "description": "Ms-graph freestoragespaceinbytes",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph freestoragespaceinbytes",
+      "freestoragespaceinbytes"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.iccid": {
+    "description": "Ms-graph iccid",
+    "type": "keyword",
+    "nl_phrases": [
+      "iccid",
+      "ms-graph iccid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.id": {
+    "description": "Ms-graph id",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.imei": {
+    "description": "Ms-graph imei",
+    "type": "keyword",
+    "nl_phrases": [
+      "imei",
+      "ms-graph imei"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.incidentId": {
+    "description": "Ms-graph incidentid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph incidentid",
+      "incidentid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.incidentWebUrl": {
+    "description": "Ms-graph incidentweburl",
+    "type": "keyword",
+    "nl_phrases": [
+      "incidentweburl",
+      "ms-graph incidentweburl"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.isEncrypted": {
+    "description": "Ms-graph isencrypted",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph isencrypted",
+      "isencrypted"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.isSupervised": {
+    "description": "Ms-graph issupervised",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph issupervised",
+      "issupervised"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.jailBroken": {
+    "description": "Ms-graph jailbroken",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph jailbroken",
+      "jailbroken"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.lastActivityDateTime": {
+    "description": "Ms-graph lastactivitydatetime",
+    "type": "date",
+    "nl_phrases": [
+      "ms-graph lastactivitydatetime",
+      "date",
+      "lastactivitydatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.lastSyncDateTime": {
+    "description": "Ms-graph lastsyncdatetime",
+    "type": "date",
+    "nl_phrases": [
+      "lastsyncdatetime",
+      "date",
+      "ms-graph lastsyncdatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.lastUpdateDateTime": {
+    "description": "Ms-graph lastupdatedatetime",
+    "type": "date",
+    "nl_phrases": [
+      "lastupdatedatetime",
+      "date",
+      "ms-graph lastupdatedatetime",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.managedDeviceName": {
+    "description": "Ms-graph manageddevicename",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph manageddevicename",
+      "manageddevicename"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.managedDeviceOwnerType": {
+    "description": "Ms-graph manageddeviceownertype",
+    "type": "keyword",
+    "nl_phrases": [
+      "manageddeviceownertype",
+      "ms-graph manageddeviceownertype"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.managedDevices.deviceName": {
+    "description": "Manageddevices devicename",
+    "type": "keyword",
+    "nl_phrases": [
+      "devicename",
+      "manageddevices devicename"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.managedDevices.id": {
+    "description": "Manageddevices id",
+    "type": "keyword",
+    "nl_phrases": [
+      "manageddevices id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.managementAgent": {
+    "description": "Ms-graph managementagent",
+    "type": "keyword",
+    "nl_phrases": [
+      "managementagent",
+      "ms-graph managementagent"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.managementCertificateExpirationDate": {
+    "description": "Ms-graph managementcertificateexpirationdate",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "time",
+      "when",
+      "managementcertificateexpirationdate",
+      "ms-graph managementcertificateexpirationdate"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.manufacturer": {
+    "description": "Ms-graph manufacturer",
+    "type": "keyword",
+    "nl_phrases": [
+      "manufacturer",
+      "ms-graph manufacturer"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.meid": {
+    "description": "Ms-graph meid",
+    "type": "keyword",
+    "nl_phrases": [
+      "meid",
+      "ms-graph meid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.mitreTechniques": {
+    "description": "Ms-graph mitretechniques",
+    "type": "keyword",
+    "nl_phrases": [
+      "mitretechniques",
+      "ms-graph mitretechniques"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.model": {
+    "description": "Ms-graph model",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph model",
+      "model"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.notes": {
+    "description": "Ms-graph notes",
+    "type": "keyword",
+    "nl_phrases": [
+      "notes",
+      "ms-graph notes"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.operatingSystem": {
+    "description": "Ms-graph operatingsystem",
+    "type": "keyword",
+    "nl_phrases": [
+      "operatingsystem",
+      "ms-graph operatingsystem"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.osVersion": {
+    "description": "Ms-graph osversion",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph osversion",
+      "osversion"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.partnerReportedThreatState": {
+    "description": "Ms-graph partnerreportedthreatstate",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph partnerreportedthreatstate",
+      "partnerreportedthreatstate"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.phoneNumber": {
+    "description": "Ms-graph phonenumber",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph phonenumber",
+      "phonenumber"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.physicalMemoryInBytes": {
+    "description": "Ms-graph physicalmemoryinbytes",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph physicalmemoryinbytes",
+      "physicalmemoryinbytes"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.platform": {
+    "description": "Ms-graph platform",
+    "type": "keyword",
+    "nl_phrases": [
+      "platform",
+      "ms-graph platform"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.providerAlertId": {
+    "description": "Ms-graph provideralertid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph provideralertid",
+      "provideralertid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.publisher": {
+    "description": "Ms-graph publisher",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph publisher",
+      "publisher"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.relationship": {
+    "description": "Ms-graph relationship",
+    "type": "keyword",
+    "nl_phrases": [
+      "relationship",
+      "ms-graph relationship"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.remediationStatus": {
+    "description": "Ms-graph remediationstatus",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph remediationstatus",
+      "remediationstatus"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.remoteAssistanceSessionErrorDetails": {
+    "description": "Ms-graph remoteassistancesessionerrordetails",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph remoteassistancesessionerrordetails",
+      "remoteassistancesessionerrordetails"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.remoteAssistanceSessionUrl": {
+    "description": "Ms-graph remoteassistancesessionurl",
+    "type": "keyword",
+    "nl_phrases": [
+      "remoteassistancesessionurl",
+      "ms-graph remoteassistancesessionurl"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.requireUserEnrollmentApproval": {
+    "description": "Ms-graph requireuserenrollmentapproval",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph requireuserenrollmentapproval",
+      "requireuserenrollmentapproval"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resolvedDateTime": {
+    "description": "Ms-graph resolveddatetime",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "time",
+      "ms-graph resolveddatetime",
+      "resolveddatetime",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.ms-graph.resource": {
+    "description": "Ms-graph resource",
+    "type": "keyword",
+    "nl_phrases": [
+      "resource",
+      "ms-graph resource"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.auditResourceType": {
+    "description": "Resources auditresourcetype",
+    "type": "keyword",
+    "nl_phrases": [
+      "resources auditresourcetype",
+      "auditresourcetype"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.displayName": {
+    "description": "Resources displayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "resources displayname",
+      "displayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.modifiedProperties.@odata.type": {
+    "description": "@odata type",
+    "type": "keyword",
+    "nl_phrases": [
+      "@odata type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.modifiedProperties.displayName": {
+    "description": "Modifiedproperties displayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "displayname",
+      "modifiedproperties displayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.modifiedProperties.newValue": {
+    "description": "Modifiedproperties newvalue",
+    "type": "keyword",
+    "nl_phrases": [
+      "newvalue",
+      "modifiedproperties newvalue"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.modifiedProperties.oldValue": {
+    "description": "Modifiedproperties oldvalue",
+    "type": "keyword",
+    "nl_phrases": [
+      "modifiedproperties oldvalue",
+      "oldvalue"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.resourceId": {
+    "description": "Resources resourceid",
+    "type": "keyword",
+    "nl_phrases": [
+      "resourceid",
+      "resources resourceid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.resources.type": {
+    "description": "Resources type",
+    "type": "keyword",
+    "nl_phrases": [
+      "type",
+      "resources type"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.roles": {
+    "description": "Ms-graph roles",
+    "type": "keyword",
+    "nl_phrases": [
+      "roles",
+      "ms-graph roles"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.serialNumber": {
+    "description": "Ms-graph serialnumber",
+    "type": "keyword",
+    "nl_phrases": [
+      "serialnumber",
+      "ms-graph serialnumber"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.serviceSource": {
+    "description": "Ms-graph servicesource",
+    "type": "keyword",
+    "nl_phrases": [
+      "servicesource",
+      "ms-graph servicesource"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.severity": {
+    "description": "Ms-graph severity",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph severity",
+      "severity"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.sizeInByte": {
+    "description": "Ms-graph sizeinbyte",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph sizeinbyte",
+      "sizeinbyte"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.status": {
+    "description": "Ms-graph status",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph status",
+      "status"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.subscriberCarrier": {
+    "description": "Ms-graph subscribercarrier",
+    "type": "keyword",
+    "nl_phrases": [
+      "subscribercarrier",
+      "ms-graph subscribercarrier"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.tenantId": {
+    "description": "Ms-graph tenantid",
+    "type": "keyword",
+    "nl_phrases": [
+      "tenantid",
+      "ms-graph tenantid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.threatDisplayName": {
+    "description": "Ms-graph threatdisplayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "threatdisplayname",
+      "ms-graph threatdisplayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.threatFamilyName": {
+    "description": "Ms-graph threatfamilyname",
+    "type": "keyword",
+    "nl_phrases": [
+      "threatfamilyname",
+      "ms-graph threatfamilyname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.title": {
+    "description": "Ms-graph title",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph title",
+      "title"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.totalStorageSpaceInBytes": {
+    "description": "Ms-graph totalstoragespaceinbytes",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph totalstoragespaceinbytes",
+      "totalstoragespaceinbytes"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.udid": {
+    "description": "Ms-graph udid",
+    "type": "keyword",
+    "nl_phrases": [
+      "udid",
+      "ms-graph udid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.userDisplayName": {
+    "description": "Ms-graph userdisplayname",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph userdisplayname",
+      "userdisplayname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.userId": {
+    "description": "Ms-graph userid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph userid",
+      "userid"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.userPrincipalName": {
+    "description": "Ms-graph userprincipalname",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph userprincipalname",
+      "userprincipalname"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.verdict": {
+    "description": "Ms-graph verdict",
+    "type": "keyword",
+    "nl_phrases": [
+      "verdict",
+      "ms-graph verdict"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.version": {
+    "description": "Ms-graph version",
+    "type": "keyword",
+    "nl_phrases": [
+      "ms-graph version",
+      "version"
+    ],
+    "query_type": "term"
+  },
+  "data.ms-graph.wiFiMacAddress": {
+    "description": "Ms-graph wifimacaddress",
+    "type": "keyword",
+    "nl_phrases": [
+      "wifimacaddress",
+      "ms-graph wifimacaddress"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.adapter": {
+    "description": "Iface adapter",
+    "type": "keyword",
+    "nl_phrases": [
+      "adapter",
+      "iface adapter"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv4.address": {
+    "description": "Ipv4 address",
+    "type": "keyword",
+    "nl_phrases": [
+      "address",
+      "ipv4 address"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv4.broadcast": {
+    "description": "Ipv4 broadcast",
+    "type": "keyword",
+    "nl_phrases": [
+      "broadcast",
+      "ipv4 broadcast"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv4.dhcp": {
+    "description": "Ipv4 dhcp",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv4 dhcp",
+      "dhcp"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv4.gateway": {
+    "description": "Ipv4 gateway",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv4 gateway",
+      "gateway"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv4.metric": {
+    "description": "Ipv4 metric",
+    "type": "long",
+    "nl_phrases": [
+      "metric",
+      "ipv4 metric"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.ipv4.netmask": {
+    "description": "Ipv4 netmask",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv4 netmask",
+      "netmask"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv6.address": {
+    "description": "Ipv6 address",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv6 address",
+      "address"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv6.broadcast": {
+    "description": "Ipv6 broadcast",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv6 broadcast",
+      "broadcast"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv6.dhcp": {
+    "description": "Ipv6 dhcp",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv6 dhcp",
+      "dhcp"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv6.gateway": {
+    "description": "Ipv6 gateway",
+    "type": "keyword",
+    "nl_phrases": [
+      "gateway",
+      "ipv6 gateway"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.ipv6.metric": {
+    "description": "Ipv6 metric",
+    "type": "long",
+    "nl_phrases": [
+      "metric",
+      "ipv6 metric"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.ipv6.netmask": {
+    "description": "Ipv6 netmask",
+    "type": "keyword",
+    "nl_phrases": [
+      "ipv6 netmask",
+      "netmask"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.mac": {
+    "description": "Iface mac",
+    "type": "keyword",
+    "nl_phrases": [
+      "mac",
+      "iface mac"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.mtu": {
+    "description": "Iface mtu",
+    "type": "long",
+    "nl_phrases": [
+      "iface mtu",
+      "mtu"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.name": {
+    "description": "Iface name",
+    "type": "keyword",
+    "nl_phrases": [
+      "iface name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.rx_bytes": {
+    "description": "Iface rx bytes",
+    "type": "long",
+    "nl_phrases": [
+      "iface rx bytes",
+      "rx bytes"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.rx_dropped": {
+    "description": "Iface rx dropped",
+    "type": "long",
+    "nl_phrases": [
+      "iface rx dropped",
+      "rx dropped"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.rx_errors": {
+    "description": "Iface rx errors",
+    "type": "long",
+    "nl_phrases": [
+      "rx errors",
+      "iface rx errors"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.rx_packets": {
+    "description": "Iface rx packets",
+    "type": "long",
+    "nl_phrases": [
+      "iface rx packets",
+      "rx packets"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.state": {
+    "description": "Iface state",
+    "type": "keyword",
+    "nl_phrases": [
+      "state",
+      "iface state"
+    ],
+    "query_type": "term"
+  },
+  "data.netinfo.iface.tx_bytes": {
+    "description": "Iface tx bytes",
+    "type": "long",
+    "nl_phrases": [
+      "tx bytes",
+      "iface tx bytes"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.tx_dropped": {
+    "description": "Iface tx dropped",
+    "type": "long",
+    "nl_phrases": [
+      "iface tx dropped",
+      "tx dropped"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.tx_errors": {
+    "description": "Iface tx errors",
+    "type": "long",
+    "nl_phrases": [
+      "tx errors",
+      "iface tx errors"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.tx_packets": {
+    "description": "Iface tx packets",
+    "type": "long",
+    "nl_phrases": [
+      "tx packets",
+      "iface tx packets"
+    ],
+    "query_type": "range"
+  },
+  "data.netinfo.iface.type": {
+    "description": "Iface type",
+    "type": "keyword",
+    "nl_phrases": [
+      "iface type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "data.office365.Actor.ID": {
+    "description": "Actor id",
+    "type": "keyword",
+    "nl_phrases": [
+      "actor id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.office365.ClientIP": {
+    "description": "Office365 clientip",
+    "type": "keyword",
+    "nl_phrases": [
+      "clientip",
+      "office365 clientip"
+    ],
+    "query_type": "term"
+  },
+  "data.office365.Operation": {
+    "description": "Office365 operation",
+    "type": "keyword",
+    "nl_phrases": [
+      "office365 operation",
+      "operation"
+    ],
+    "query_type": "term"
+  },
+  "data.office365.ResultStatus": {
+    "description": "Office365 resultstatus",
+    "type": "keyword",
+    "nl_phrases": [
+      "office365 resultstatus",
+      "resultstatus"
+    ],
+    "query_type": "term"
+  },
+  "data.office365.Subscription": {
+    "description": "Office365 subscription",
+    "type": "keyword",
+    "nl_phrases": [
+      "subscription",
+      "office365 subscription"
+    ],
+    "query_type": "term"
+  },
+  "data.office365.UserId": {
+    "description": "Office365 userid",
+    "type": "keyword",
+    "nl_phrases": [
+      "office365 userid",
+      "userid"
+    ],
+    "query_type": "term"
+  },
+  "data.os.architecture": {
+    "description": "Os architecture",
+    "type": "keyword",
+    "nl_phrases": [
+      "architecture",
+      "os architecture"
+    ],
+    "query_type": "term"
+  },
+  "data.os.build": {
+    "description": "Os build",
+    "type": "keyword",
+    "nl_phrases": [
+      "build",
+      "os build"
+    ],
+    "query_type": "term"
+  },
+  "data.os.codename": {
+    "description": "Os codename",
+    "type": "keyword",
+    "nl_phrases": [
+      "codename",
+      "os codename"
+    ],
+    "query_type": "term"
+  },
+  "data.os.display_version": {
+    "description": "Os display version",
+    "type": "keyword",
+    "nl_phrases": [
+      "display version",
+      "os display version"
+    ],
+    "query_type": "term"
+  },
+  "data.os.hostname": {
+    "description": "Hostname where the event occurred",
+    "type": "keyword",
+    "nl_phrases": [
+      "hostname",
+      "os hostname"
+    ],
+    "query_type": "term"
+  },
+  "data.os.major": {
+    "description": "Os major",
+    "type": "keyword",
+    "nl_phrases": [
+      "os major",
+      "major"
+    ],
+    "query_type": "term"
+  },
+  "data.os.minor": {
+    "description": "Os minor",
+    "type": "keyword",
+    "nl_phrases": [
+      "minor",
+      "os minor"
+    ],
+    "query_type": "term"
+  },
+  "data.os.name": {
+    "description": "Os name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "os name"
+    ],
+    "query_type": "term"
+  },
+  "data.os.patch": {
+    "description": "Os patch",
+    "type": "keyword",
+    "nl_phrases": [
+      "os patch",
+      "patch"
+    ],
+    "query_type": "term"
+  },
+  "data.os.platform": {
+    "description": "Os platform",
+    "type": "keyword",
+    "nl_phrases": [
+      "platform",
+      "os platform"
+    ],
+    "query_type": "term"
+  },
+  "data.os.release": {
+    "description": "Os release",
+    "type": "keyword",
+    "nl_phrases": [
+      "release",
+      "os release"
+    ],
+    "query_type": "term"
+  },
+  "data.os.release_version": {
+    "description": "Os release version",
+    "type": "keyword",
+    "nl_phrases": [
+      "release version",
+      "os release version"
+    ],
+    "query_type": "term"
+  },
+  "data.os.sysname": {
+    "description": "Os sysname",
+    "type": "keyword",
+    "nl_phrases": [
+      "os sysname",
+      "sysname"
+    ],
+    "query_type": "term"
+  },
+  "data.os.version": {
+    "description": "Os version",
+    "type": "keyword",
+    "nl_phrases": [
+      "os version",
+      "version"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.check.description": {
+    "description": "Check description",
+    "type": "text",
+    "nl_phrases": [
+      "check description",
+      "description"
+    ],
+    "query_type": "match"
+  },
+  "data.oscap.check.id": {
+    "description": "Check id",
+    "type": "keyword",
+    "nl_phrases": [
+      "check id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.check.identifiers": {
+    "description": "Check identifiers",
+    "type": "text",
+    "nl_phrases": [
+      "identifiers",
+      "check identifiers"
+    ],
+    "query_type": "match"
+  },
+  "data.oscap.check.oval.id": {
+    "description": "Oval id",
+    "type": "keyword",
+    "nl_phrases": [
+      "oval id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.check.rationale": {
+    "description": "Check rationale",
+    "type": "text",
+    "nl_phrases": [
+      "check rationale",
+      "rationale"
+    ],
+    "query_type": "match"
+  },
+  "data.oscap.check.references": {
+    "description": "Check references",
+    "type": "text",
+    "nl_phrases": [
+      "references",
+      "check references"
+    ],
+    "query_type": "match"
+  },
+  "data.oscap.check.result": {
+    "description": "Check result",
+    "type": "keyword",
+    "nl_phrases": [
+      "check result",
+      "result"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.check.severity": {
+    "description": "Check severity",
+    "type": "keyword",
+    "nl_phrases": [
+      "check severity",
+      "severity"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.check.title": {
+    "description": "Check title",
+    "type": "keyword",
+    "nl_phrases": [
+      "title",
+      "check title"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.scan.benchmark.id": {
+    "description": "Benchmark id",
+    "type": "keyword",
+    "nl_phrases": [
+      "benchmark id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.scan.content": {
+    "description": "Scan content",
+    "type": "keyword",
+    "nl_phrases": [
+      "content",
+      "scan content"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.scan.id": {
+    "description": "Scan id",
+    "type": "keyword",
+    "nl_phrases": [
+      "scan id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.scan.profile.id": {
+    "description": "Profile id",
+    "type": "keyword",
+    "nl_phrases": [
+      "profile id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.scan.profile.title": {
+    "description": "Profile title",
+    "type": "keyword",
+    "nl_phrases": [
+      "title",
+      "profile title"
+    ],
+    "query_type": "term"
+  },
+  "data.oscap.scan.return_code": {
+    "description": "Scan return code",
+    "type": "long",
+    "nl_phrases": [
+      "scan return code",
+      "return code"
+    ],
+    "query_type": "range"
+  },
+  "data.oscap.scan.score": {
+    "description": "Scan score",
+    "type": "double",
+    "nl_phrases": [
+      "scan score",
+      "score"
+    ],
+    "query_type": "range"
+  },
+  "data.osquery.action": {
+    "description": "Osquery action",
+    "type": "keyword",
+    "nl_phrases": [
+      "action",
+      "osquery action"
+    ],
+    "query_type": "term"
+  },
+  "data.osquery.calendarTime": {
+    "description": "Osquery calendartime",
+    "type": "keyword",
+    "nl_phrases": [
+      "osquery calendartime",
+      "calendartime"
+    ],
+    "query_type": "term"
+  },
+  "data.osquery.name": {
+    "description": "Osquery name",
+    "type": "keyword",
+    "nl_phrases": [
+      "osquery name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "data.osquery.pack": {
+    "description": "Osquery pack",
+    "type": "keyword",
+    "nl_phrases": [
+      "osquery pack",
+      "pack"
+    ],
+    "query_type": "term"
+  },
+  "data.parameters.extra_args": {
+    "description": "Parameters extra args",
+    "type": "keyword",
+    "nl_phrases": [
+      "extra args",
+      "parameters extra args"
+    ],
+    "query_type": "term"
+  },
+  "data.port.inode": {
+    "description": "Port inode",
+    "type": "long",
+    "nl_phrases": [
+      "port inode",
+      "inode"
+    ],
+    "query_type": "range"
+  },
+  "data.port.local_ip": {
+    "description": "Port local ip",
+    "type": "ip",
+    "nl_phrases": [
+      "local ip",
+      "network address",
+      "ip address",
+      "port local ip"
+    ],
+    "query_type": "term"
+  },
+  "data.port.local_port": {
+    "description": "Port local port",
+    "type": "long",
+    "nl_phrases": [
+      "local port",
+      "port local port"
+    ],
+    "query_type": "range"
+  },
+  "data.port.pid": {
+    "description": "Port pid",
+    "type": "long",
+    "nl_phrases": [
+      "port pid",
+      "pid"
+    ],
+    "query_type": "range"
+  },
+  "data.port.process": {
+    "description": "Port process",
+    "type": "keyword",
+    "nl_phrases": [
+      "port process",
+      "process"
+    ],
+    "query_type": "term"
+  },
+  "data.port.protocol": {
+    "description": "Port protocol",
+    "type": "keyword",
+    "nl_phrases": [
+      "port protocol",
+      "protocol"
+    ],
+    "query_type": "term"
+  },
+  "data.port.remote_ip": {
+    "description": "Port remote ip",
+    "type": "ip",
+    "nl_phrases": [
+      "network address",
+      "port remote ip",
+      "remote ip",
+      "ip address"
+    ],
+    "query_type": "term"
+  },
+  "data.port.remote_port": {
+    "description": "Port remote port",
+    "type": "long",
+    "nl_phrases": [
+      "port remote port",
+      "remote port"
+    ],
+    "query_type": "range"
+  },
+  "data.port.rx_queue": {
+    "description": "Port rx queue",
+    "type": "long",
+    "nl_phrases": [
+      "rx queue",
+      "port rx queue"
+    ],
+    "query_type": "range"
+  },
+  "data.port.state": {
+    "description": "Port state",
+    "type": "keyword",
+    "nl_phrases": [
+      "state",
+      "port state"
+    ],
+    "query_type": "term"
+  },
+  "data.port.tx_queue": {
+    "description": "Port tx queue",
+    "type": "long",
+    "nl_phrases": [
+      "tx queue",
+      "port tx queue"
+    ],
+    "query_type": "range"
+  },
+  "data.process.args": {
+    "description": "Process args",
+    "type": "keyword",
+    "nl_phrases": [
+      "process args",
+      "args"
+    ],
+    "query_type": "term"
+  },
+  "data.process.cmd": {
+    "description": "Process cmd",
+    "type": "keyword",
+    "nl_phrases": [
+      "process cmd",
+      "cmd"
+    ],
+    "query_type": "term"
+  },
+  "data.process.egroup": {
+    "description": "Process egroup",
+    "type": "keyword",
+    "nl_phrases": [
+      "process egroup",
+      "egroup"
+    ],
+    "query_type": "term"
+  },
+  "data.process.euser": {
+    "description": "Process euser",
+    "type": "keyword",
+    "nl_phrases": [
+      "euser",
+      "process euser"
+    ],
+    "query_type": "term"
+  },
+  "data.process.fgroup": {
+    "description": "Process fgroup",
+    "type": "keyword",
+    "nl_phrases": [
+      "process fgroup",
+      "fgroup"
+    ],
+    "query_type": "term"
+  },
+  "data.process.name": {
+    "description": "Name of the process that triggered the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "process name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "data.process.nice": {
+    "description": "Process nice",
+    "type": "long",
+    "nl_phrases": [
+      "process nice",
+      "nice"
+    ],
+    "query_type": "range"
+  },
+  "data.process.nlwp": {
+    "description": "Process nlwp",
+    "type": "long",
+    "nl_phrases": [
+      "process nlwp",
+      "nlwp"
+    ],
+    "query_type": "range"
+  },
+  "data.process.pgrp": {
+    "description": "Process pgrp",
+    "type": "long",
+    "nl_phrases": [
+      "process pgrp",
+      "pgrp"
+    ],
+    "query_type": "range"
+  },
+  "data.process.pid": {
+    "description": "Process pid",
+    "type": "long",
+    "nl_phrases": [
+      "pid",
+      "process pid"
+    ],
+    "query_type": "range"
+  },
+  "data.process.ppid": {
+    "description": "Process ppid",
+    "type": "long",
+    "nl_phrases": [
+      "ppid",
+      "process ppid"
+    ],
+    "query_type": "range"
+  },
+  "data.process.priority": {
+    "description": "Process priority",
+    "type": "long",
+    "nl_phrases": [
+      "process priority",
+      "priority"
+    ],
+    "query_type": "range"
+  },
+  "data.process.processor": {
+    "description": "Process processor",
+    "type": "long",
+    "nl_phrases": [
+      "process processor",
+      "processor"
+    ],
+    "query_type": "range"
+  },
+  "data.process.resident": {
+    "description": "Process resident",
+    "type": "long",
+    "nl_phrases": [
+      "process resident",
+      "resident"
+    ],
+    "query_type": "range"
+  },
+  "data.process.rgroup": {
+    "description": "Process rgroup",
+    "type": "keyword",
+    "nl_phrases": [
+      "rgroup",
+      "process rgroup"
+    ],
+    "query_type": "term"
+  },
+  "data.process.ruser": {
+    "description": "Process ruser",
+    "type": "keyword",
+    "nl_phrases": [
+      "ruser",
+      "process ruser"
+    ],
+    "query_type": "term"
+  },
+  "data.process.session": {
+    "description": "Process session",
+    "type": "long",
+    "nl_phrases": [
+      "process session",
+      "session"
+    ],
+    "query_type": "range"
+  },
+  "data.process.sgroup": {
+    "description": "Process sgroup",
+    "type": "keyword",
+    "nl_phrases": [
+      "sgroup",
+      "process sgroup"
+    ],
+    "query_type": "term"
+  },
+  "data.process.share": {
+    "description": "Process share",
+    "type": "long",
+    "nl_phrases": [
+      "share",
+      "process share"
+    ],
+    "query_type": "range"
+  },
+  "data.process.size": {
+    "description": "Process size",
+    "type": "long",
+    "nl_phrases": [
+      "process size",
+      "size"
+    ],
+    "query_type": "range"
+  },
+  "data.process.start_time": {
+    "description": "Process start time",
+    "type": "long",
+    "nl_phrases": [
+      "start time",
+      "process start time"
+    ],
+    "query_type": "range"
+  },
+  "data.process.state": {
+    "description": "Process state",
+    "type": "keyword",
+    "nl_phrases": [
+      "process state",
+      "state"
+    ],
+    "query_type": "term"
+  },
+  "data.process.stime": {
+    "description": "Process stime",
+    "type": "long",
+    "nl_phrases": [
+      "stime",
+      "process stime"
+    ],
+    "query_type": "range"
+  },
+  "data.process.suser": {
+    "description": "Process suser",
+    "type": "keyword",
+    "nl_phrases": [
+      "process suser",
+      "suser"
+    ],
+    "query_type": "term"
+  },
+  "data.process.tgid": {
+    "description": "Process tgid",
+    "type": "long",
+    "nl_phrases": [
+      "tgid",
+      "process tgid"
+    ],
+    "query_type": "range"
+  },
+  "data.process.tty": {
+    "description": "Process tty",
+    "type": "long",
+    "nl_phrases": [
+      "process tty",
+      "tty"
+    ],
+    "query_type": "range"
+  },
+  "data.process.utime": {
+    "description": "Process utime",
+    "type": "long",
+    "nl_phrases": [
+      "process utime",
+      "utime"
+    ],
+    "query_type": "range"
+  },
+  "data.process.vm_size": {
+    "description": "Process vm size",
+    "type": "long",
+    "nl_phrases": [
+      "vm size",
+      "process vm size"
+    ],
+    "query_type": "range"
+  },
+  "data.program.architecture": {
+    "description": "Program architecture",
+    "type": "keyword",
+    "nl_phrases": [
+      "architecture",
+      "program architecture"
+    ],
+    "query_type": "term"
+  },
+  "data.program.description": {
+    "description": "Program description",
+    "type": "keyword",
+    "nl_phrases": [
+      "description",
+      "program description"
+    ],
+    "query_type": "term"
+  },
+  "data.program.format": {
+    "description": "Program format",
+    "type": "keyword",
+    "nl_phrases": [
+      "program format",
+      "format"
+    ],
+    "query_type": "term"
+  },
+  "data.program.install_time": {
+    "description": "Program install time",
+    "type": "keyword",
+    "nl_phrases": [
+      "program install time",
+      "install time"
+    ],
+    "query_type": "term"
+  },
+  "data.program.location": {
+    "description": "Program location",
+    "type": "keyword",
+    "nl_phrases": [
+      "location",
+      "program location"
+    ],
+    "query_type": "term"
+  },
+  "data.program.multiarch": {
+    "description": "Program multiarch",
+    "type": "keyword",
+    "nl_phrases": [
+      "multiarch",
+      "program multiarch"
+    ],
+    "query_type": "term"
+  },
+  "data.program.name": {
+    "description": "Program name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "program name"
+    ],
+    "query_type": "term"
+  },
+  "data.program.priority": {
+    "description": "Program priority",
+    "type": "keyword",
+    "nl_phrases": [
+      "program priority",
+      "priority"
+    ],
+    "query_type": "term"
+  },
+  "data.program.section": {
+    "description": "Program section",
+    "type": "keyword",
+    "nl_phrases": [
+      "program section",
+      "section"
+    ],
+    "query_type": "term"
+  },
+  "data.program.size": {
+    "description": "Program size",
+    "type": "long",
+    "nl_phrases": [
+      "program size",
+      "size"
+    ],
+    "query_type": "range"
+  },
+  "data.program.source": {
+    "description": "Program source",
+    "type": "keyword",
+    "nl_phrases": [
+      "source",
+      "program source"
+    ],
+    "query_type": "term"
+  },
+  "data.program.vendor": {
+    "description": "Program vendor",
+    "type": "keyword",
+    "nl_phrases": [
+      "vendor",
+      "program vendor"
+    ],
+    "query_type": "term"
+  },
+  "data.program.version": {
+    "description": "Program version",
+    "type": "keyword",
+    "nl_phrases": [
+      "program version",
+      "version"
+    ],
+    "query_type": "term"
+  },
+  "data.protocol": {
+    "description": "Network protocol used in the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "protocol",
+      "data protocol"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.compliance.cis": {
+    "description": "Compliance cis",
+    "type": "keyword",
+    "nl_phrases": [
+      "compliance cis",
+      "cis"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.compliance.cis_csc": {
+    "description": "Compliance cis csc",
+    "type": "keyword",
+    "nl_phrases": [
+      "cis csc",
+      "compliance cis csc"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.compliance.hipaa": {
+    "description": "Compliance hipaa",
+    "type": "keyword",
+    "nl_phrases": [
+      "compliance hipaa",
+      "hipaa"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.compliance.nist_800_53": {
+    "description": "Compliance nist 800 53",
+    "type": "keyword",
+    "nl_phrases": [
+      "nist 800 53",
+      "compliance nist 800 53"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.compliance.pci_dss": {
+    "description": "Compliance pci dss",
+    "type": "keyword",
+    "nl_phrases": [
+      "pci dss",
+      "compliance pci dss"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.description": {
+    "description": "Check description",
+    "type": "keyword",
+    "nl_phrases": [
+      "check description",
+      "description"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.directory": {
+    "description": "Check directory",
+    "type": "keyword",
+    "nl_phrases": [
+      "check directory",
+      "directory"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.file": {
+    "description": "Check file",
+    "type": "keyword",
+    "nl_phrases": [
+      "check file",
+      "file"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.id": {
+    "description": "Check id",
+    "type": "keyword",
+    "nl_phrases": [
+      "check id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.previous_result": {
+    "description": "Check previous result",
+    "type": "keyword",
+    "nl_phrases": [
+      "previous result",
+      "check previous result"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.process": {
+    "description": "Check process",
+    "type": "keyword",
+    "nl_phrases": [
+      "check process",
+      "process"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.rationale": {
+    "description": "Check rationale",
+    "type": "keyword",
+    "nl_phrases": [
+      "check rationale",
+      "rationale"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.reason": {
+    "description": "Check reason",
+    "type": "keyword",
+    "nl_phrases": [
+      "reason",
+      "check reason"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.references": {
+    "description": "Check references",
+    "type": "keyword",
+    "nl_phrases": [
+      "references",
+      "check references"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.registry": {
+    "description": "Check registry",
+    "type": "keyword",
+    "nl_phrases": [
+      "check registry",
+      "registry"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.remediation": {
+    "description": "Check remediation",
+    "type": "keyword",
+    "nl_phrases": [
+      "check remediation",
+      "remediation"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.result": {
+    "description": "Check result",
+    "type": "keyword",
+    "nl_phrases": [
+      "check result",
+      "result"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.check.title": {
+    "description": "Check title",
+    "type": "keyword",
+    "nl_phrases": [
+      "title",
+      "check title"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.description": {
+    "description": "Sca description",
+    "type": "keyword",
+    "nl_phrases": [
+      "sca description",
+      "description"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.failed": {
+    "description": "Sca failed",
+    "type": "integer",
+    "nl_phrases": [
+      "sca failed",
+      "failed"
+    ],
+    "query_type": "range"
+  },
+  "data.sca.file": {
+    "description": "Sca file",
+    "type": "keyword",
+    "nl_phrases": [
+      "sca file",
+      "file"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.invalid": {
+    "description": "Sca invalid",
+    "type": "keyword",
+    "nl_phrases": [
+      "invalid",
+      "sca invalid"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.name": {
+    "description": "Sca name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "sca name"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.passed": {
+    "description": "Sca passed",
+    "type": "integer",
+    "nl_phrases": [
+      "passed",
+      "sca passed"
+    ],
+    "query_type": "range"
+  },
+  "data.sca.policy": {
+    "description": "Sca policy",
+    "type": "keyword",
+    "nl_phrases": [
+      "sca policy",
+      "policy"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.policy_id": {
+    "description": "Sca policy id",
+    "type": "keyword",
+    "nl_phrases": [
+      "sca policy id",
+      "policy id"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.scan_id": {
+    "description": "Sca scan id",
+    "type": "keyword",
+    "nl_phrases": [
+      "sca scan id",
+      "scan id"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.score": {
+    "description": "Sca score",
+    "type": "long",
+    "nl_phrases": [
+      "score",
+      "sca score"
+    ],
+    "query_type": "range"
+  },
+  "data.sca.total_checks": {
+    "description": "Sca total checks",
+    "type": "keyword",
+    "nl_phrases": [
+      "sca total checks",
+      "total checks"
+    ],
+    "query_type": "term"
+  },
+  "data.sca.type": {
+    "description": "Sca type",
+    "type": "keyword",
+    "nl_phrases": [
+      "type",
+      "sca type"
+    ],
+    "query_type": "term"
+  },
+  "data.scan_id": {
+    "description": "Data scan id",
+    "type": "keyword",
+    "nl_phrases": [
+      "scan id",
+      "data scan id"
+    ],
+    "query_type": "term"
+  },
+  "data.srcip": {
+    "description": "Source IP address where the attack or event originated",
+    "type": "keyword",
+    "nl_phrases": [
+      "source ip",
+      "from ip",
+      "attacker ip",
+      "origin ip",
+      "client ip"
+    ],
+    "query_type": "term"
+  },
+  "data.srcport": {
+    "description": "Source port number",
+    "type": "keyword",
+    "nl_phrases": [
+      "data srcport",
+      "srcport"
+    ],
+    "query_type": "term"
+  },
+  "data.srcuser": {
+    "description": "Data srcuser",
+    "type": "keyword",
+    "nl_phrases": [
+      "srcuser",
+      "data srcuser"
+    ],
+    "query_type": "term"
+  },
+  "data.system_name": {
+    "description": "Data system name",
+    "type": "keyword",
+    "nl_phrases": [
+      "system name",
+      "data system name"
+    ],
+    "query_type": "term"
+  },
+  "data.timestamp": {
+    "description": "Data timestamp",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "data timestamp",
+      "timestamp",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.title": {
+    "description": "Data title",
+    "type": "keyword",
+    "nl_phrases": [
+      "title",
+      "data title"
+    ],
+    "query_type": "term"
+  },
+  "data.type": {
+    "description": "Data type",
+    "type": "keyword",
+    "nl_phrases": [
+      "type",
+      "data type"
+    ],
+    "query_type": "term"
+  },
+  "data.uid": {
+    "description": "Data uid",
+    "type": "keyword",
+    "nl_phrases": [
+      "uid",
+      "data uid"
+    ],
+    "query_type": "term"
+  },
+  "data.url": {
+    "description": "URL associated with the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "data url",
+      "url"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.description": {
+    "description": "Virustotal description",
+    "type": "keyword",
+    "nl_phrases": [
+      "description",
+      "virustotal description"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.error": {
+    "description": "Virustotal error",
+    "type": "keyword",
+    "nl_phrases": [
+      "virustotal error",
+      "error"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.found": {
+    "description": "Virustotal found",
+    "type": "keyword",
+    "nl_phrases": [
+      "found",
+      "virustotal found"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.malicious": {
+    "description": "Virustotal malicious",
+    "type": "keyword",
+    "nl_phrases": [
+      "malicious",
+      "virustotal malicious"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.permalink": {
+    "description": "Virustotal permalink",
+    "type": "keyword",
+    "nl_phrases": [
+      "permalink",
+      "virustotal permalink"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.positives": {
+    "description": "Virustotal positives",
+    "type": "keyword",
+    "nl_phrases": [
+      "positives",
+      "virustotal positives"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.scan_date": {
+    "description": "Virustotal scan date",
+    "type": "keyword",
+    "nl_phrases": [
+      "scan date",
+      "virustotal scan date"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.sha1": {
+    "description": "Virustotal sha1",
+    "type": "keyword",
+    "nl_phrases": [
+      "sha1",
+      "virustotal sha1"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.source.alert_id": {
+    "description": "Source alert id",
+    "type": "keyword",
+    "nl_phrases": [
+      "source alert id",
+      "alert id"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.source.file": {
+    "description": "Source file",
+    "type": "keyword",
+    "nl_phrases": [
+      "source file",
+      "file"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.source.md5": {
+    "description": "Source md5",
+    "type": "keyword",
+    "nl_phrases": [
+      "md5",
+      "source md5"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.source.sha1": {
+    "description": "Source sha1",
+    "type": "keyword",
+    "nl_phrases": [
+      "source sha1",
+      "sha1"
+    ],
+    "query_type": "term"
+  },
+  "data.virustotal.total": {
+    "description": "Virustotal total",
+    "type": "keyword",
+    "nl_phrases": [
+      "total",
+      "virustotal total"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.assigner": {
+    "description": "Vulnerability assigner",
+    "type": "keyword",
+    "nl_phrases": [
+      "vulnerability assigner",
+      "assigner"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cve": {
+    "description": "Vulnerability cve",
+    "type": "keyword",
+    "nl_phrases": [
+      "cve",
+      "vulnerability cve"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cve_version": {
+    "description": "Vulnerability cve version",
+    "type": "keyword",
+    "nl_phrases": [
+      "vulnerability cve version",
+      "cve version"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.base_score": {
+    "description": "Cvss2 base score",
+    "type": "keyword",
+    "nl_phrases": [
+      "cvss2 base score",
+      "base score"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.exploitability_score": {
+    "description": "Cvss2 exploitability score",
+    "type": "keyword",
+    "nl_phrases": [
+      "exploitability score",
+      "cvss2 exploitability score"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.impact_score": {
+    "description": "Cvss2 impact score",
+    "type": "keyword",
+    "nl_phrases": [
+      "impact score",
+      "cvss2 impact score"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.access_complexity": {
+    "description": "Vector access complexity",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector access complexity",
+      "access complexity"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.attack_vector": {
+    "description": "Vector attack vector",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector attack vector",
+      "attack vector"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.authentication": {
+    "description": "Vector authentication",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector authentication",
+      "authentication"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.availability": {
+    "description": "Vector availability",
+    "type": "keyword",
+    "nl_phrases": [
+      "availability",
+      "vector availability"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.confidentiality_impact": {
+    "description": "Vector confidentiality impact",
+    "type": "keyword",
+    "nl_phrases": [
+      "confidentiality impact",
+      "vector confidentiality impact"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.integrity_impact": {
+    "description": "Vector integrity impact",
+    "type": "keyword",
+    "nl_phrases": [
+      "integrity impact",
+      "vector integrity impact"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.privileges_required": {
+    "description": "Vector privileges required",
+    "type": "keyword",
+    "nl_phrases": [
+      "privileges required",
+      "vector privileges required"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.scope": {
+    "description": "Vector scope",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector scope",
+      "scope"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss2.vector.user_interaction": {
+    "description": "Vector user interaction",
+    "type": "keyword",
+    "nl_phrases": [
+      "user interaction",
+      "vector user interaction"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.base_score": {
+    "description": "Cvss3 base score",
+    "type": "keyword",
+    "nl_phrases": [
+      "cvss3 base score",
+      "base score"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.exploitability_score": {
+    "description": "Cvss3 exploitability score",
+    "type": "keyword",
+    "nl_phrases": [
+      "exploitability score",
+      "cvss3 exploitability score"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.impact_score": {
+    "description": "Cvss3 impact score",
+    "type": "keyword",
+    "nl_phrases": [
+      "cvss3 impact score",
+      "impact score"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.access_complexity": {
+    "description": "Vector access complexity",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector access complexity",
+      "access complexity"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.attack_vector": {
+    "description": "Vector attack vector",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector attack vector",
+      "attack vector"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.authentication": {
+    "description": "Vector authentication",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector authentication",
+      "authentication"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.availability": {
+    "description": "Vector availability",
+    "type": "keyword",
+    "nl_phrases": [
+      "availability",
+      "vector availability"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.confidentiality_impact": {
+    "description": "Vector confidentiality impact",
+    "type": "keyword",
+    "nl_phrases": [
+      "confidentiality impact",
+      "vector confidentiality impact"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.integrity_impact": {
+    "description": "Vector integrity impact",
+    "type": "keyword",
+    "nl_phrases": [
+      "integrity impact",
+      "vector integrity impact"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.privileges_required": {
+    "description": "Vector privileges required",
+    "type": "keyword",
+    "nl_phrases": [
+      "privileges required",
+      "vector privileges required"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.scope": {
+    "description": "Vector scope",
+    "type": "keyword",
+    "nl_phrases": [
+      "vector scope",
+      "scope"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cvss.cvss3.vector.user_interaction": {
+    "description": "Vector user interaction",
+    "type": "keyword",
+    "nl_phrases": [
+      "user interaction",
+      "vector user interaction"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.cwe_reference": {
+    "description": "Vulnerability cwe reference",
+    "type": "keyword",
+    "nl_phrases": [
+      "cwe reference",
+      "vulnerability cwe reference"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.package.architecture": {
+    "description": "Package architecture",
+    "type": "keyword",
+    "nl_phrases": [
+      "architecture",
+      "package architecture"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.package.condition": {
+    "description": "Package condition",
+    "type": "keyword",
+    "nl_phrases": [
+      "condition",
+      "package condition"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.package.generated_cpe": {
+    "description": "Package generated cpe",
+    "type": "keyword",
+    "nl_phrases": [
+      "package generated cpe",
+      "generated cpe"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.package.name": {
+    "description": "Package name",
+    "type": "keyword",
+    "nl_phrases": [
+      "package name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.package.source": {
+    "description": "Package source",
+    "type": "keyword",
+    "nl_phrases": [
+      "source",
+      "package source"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.package.version": {
+    "description": "Package version",
+    "type": "keyword",
+    "nl_phrases": [
+      "package version",
+      "version"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.published": {
+    "description": "Vulnerability published",
+    "type": "date",
+    "nl_phrases": [
+      "published",
+      "vulnerability published",
+      "date",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "data.vulnerability.rationale": {
+    "description": "Vulnerability rationale",
+    "type": "keyword",
+    "nl_phrases": [
+      "rationale",
+      "vulnerability rationale"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.reference": {
+    "description": "Vulnerability reference",
+    "type": "keyword",
+    "nl_phrases": [
+      "vulnerability reference",
+      "reference"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.scanner.reference": {
+    "description": "Scanner reference",
+    "type": "keyword",
+    "nl_phrases": [
+      "scanner reference",
+      "reference"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.severity": {
+    "description": "Vulnerability severity",
+    "type": "keyword",
+    "nl_phrases": [
+      "severity",
+      "vulnerability severity"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.status": {
+    "description": "Vulnerability status",
+    "type": "keyword",
+    "nl_phrases": [
+      "vulnerability status",
+      "status"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.title": {
+    "description": "Vulnerability title",
+    "type": "keyword",
+    "nl_phrases": [
+      "title",
+      "vulnerability title"
+    ],
+    "query_type": "term"
+  },
+  "data.vulnerability.updated": {
+    "description": "Vulnerability updated",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "time",
+      "when",
+      "updated",
+      "vulnerability updated"
+    ],
+    "query_type": "range"
+  },
+  "decoder.accumulate": {
+    "description": "Decoder accumulate",
+    "type": "long",
+    "nl_phrases": [
+      "decoder accumulate",
+      "accumulate"
+    ],
+    "query_type": "range"
+  },
+  "decoder.fts": {
+    "description": "Decoder fts",
+    "type": "long",
+    "nl_phrases": [
+      "decoder fts",
+      "fts"
+    ],
+    "query_type": "range"
+  },
+  "decoder.ftscomment": {
+    "description": "Decoder ftscomment",
+    "type": "keyword",
+    "nl_phrases": [
+      "decoder ftscomment",
+      "ftscomment"
+    ],
+    "query_type": "term"
+  },
+  "decoder.name": {
+    "description": "Name of the Wazuh decoder used to parse the log",
+    "type": "keyword",
+    "nl_phrases": [
+      "decoder name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "decoder.parent": {
+    "description": "Decoder parent",
+    "type": "keyword",
+    "nl_phrases": [
+      "parent",
+      "decoder parent"
+    ],
+    "query_type": "term"
+  },
+  "full_log": {
+    "description": "Complete raw log entry that triggered the rule",
+    "type": "text",
+    "nl_phrases": [
+      "raw log",
+      "original log",
+      "full message",
+      "log entry"
+    ],
+    "query_type": "match"
+  },
+  "host": {
+    "description": "Host",
+    "type": "keyword",
+    "nl_phrases": [
+      "host"
+    ],
+    "query_type": "term"
+  },
+  "id": {
+    "description": "Id",
+    "type": "keyword",
+    "nl_phrases": [
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "input.type": {
+    "description": "Input type",
+    "type": "keyword",
+    "nl_phrases": [
+      "input type",
+      "type"
+    ],
+    "query_type": "term"
+  },
+  "location": {
+    "description": "Log file path or source location that generated the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "log source",
+      "log file",
+      "source file"
+    ],
+    "query_type": "term"
+  },
+  "manager.name": {
+    "description": "Name of the Wazuh manager that processed the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "manager name"
+    ],
+    "query_type": "term"
+  },
+  "message": {
+    "description": "Message",
+    "type": "text",
+    "nl_phrases": [
+      "message"
+    ],
+    "query_type": "match"
+  },
+  "offset": {
+    "description": "Offset",
+    "type": "keyword",
+    "nl_phrases": [
+      "offset"
+    ],
+    "query_type": "term"
+  },
+  "predecoder.hostname": {
+    "description": "Predecoder hostname",
+    "type": "keyword",
+    "nl_phrases": [
+      "hostname",
+      "predecoder hostname"
+    ],
+    "query_type": "term"
+  },
+  "predecoder.program_name": {
+    "description": "Predecoder program name",
+    "type": "keyword",
+    "nl_phrases": [
+      "predecoder program name",
+      "program name"
+    ],
+    "query_type": "term"
+  },
+  "predecoder.timestamp": {
+    "description": "Predecoder timestamp",
+    "type": "keyword",
+    "nl_phrases": [
+      "predecoder timestamp",
+      "timestamp"
+    ],
+    "query_type": "term"
+  },
+  "previous_log": {
+    "description": "Previous log",
+    "type": "text",
+    "nl_phrases": [
+      "previous log"
+    ],
+    "query_type": "match"
+  },
+  "previous_output": {
+    "description": "Previous output",
+    "type": "keyword",
+    "nl_phrases": [
+      "previous output"
+    ],
+    "query_type": "term"
+  },
+  "program_name": {
+    "description": "Program name",
+    "type": "keyword",
+    "nl_phrases": [
+      "program name"
+    ],
+    "query_type": "term"
+  },
+  "rule.cis": {
+    "description": "Rule cis",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule cis",
+      "cis"
+    ],
+    "query_type": "term"
+  },
+  "rule.cve": {
+    "description": "Rule cve",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule cve",
+      "cve"
+    ],
+    "query_type": "term"
+  },
+  "rule.description": {
+    "description": "Human readable description of what the rule detected",
+    "type": "keyword",
+    "nl_phrases": [
+      "description",
+      "what happened",
+      "event details",
+      "rule details"
+    ],
+    "query_type": "term"
+  },
+  "rule.firedtimes": {
+    "description": "Rule firedtimes",
+    "type": "long",
+    "nl_phrases": [
+      "rule firedtimes",
+      "firedtimes"
+    ],
+    "query_type": "range"
+  },
+  "rule.frequency": {
+    "description": "Rule frequency",
+    "type": "long",
+    "nl_phrases": [
+      "frequency",
+      "rule frequency"
+    ],
+    "query_type": "range"
+  },
+  "rule.gdpr": {
+    "description": "GDPR compliance article associated with the rule",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule gdpr",
+      "gdpr"
+    ],
+    "query_type": "term"
+  },
+  "rule.gpg13": {
+    "description": "Rule gpg13",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule gpg13",
+      "gpg13"
+    ],
+    "query_type": "term"
+  },
+  "rule.groups": {
+    "description": "Categories the rule belongs to e.g. authentication_failed malware",
+    "type": "keyword",
+    "nl_phrases": [
+      "category",
+      "type",
+      "attack type",
+      "event type",
+      "classification"
+    ],
+    "query_type": "term"
+  },
+  "rule.hipaa": {
+    "description": "HIPAA compliance requirement associated with the rule",
+    "type": "keyword",
+    "nl_phrases": [
+      "hipaa",
+      "rule hipaa"
+    ],
+    "query_type": "term"
+  },
+  "rule.id": {
+    "description": "Unique identifier of the Wazuh detection rule",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule id",
+      "rule number",
+      "detection rule"
+    ],
+    "query_type": "term"
+  },
+  "rule.info": {
+    "description": "Rule info",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule info",
+      "info"
+    ],
+    "query_type": "term"
+  },
+  "rule.level": {
+    "description": "Severity level of the rule from 0 to 15, higher is more severe",
+    "type": "long",
+    "nl_phrases": [
+      "severity",
+      "level",
+      "high severity",
+      "critical",
+      "low severity",
+      "serious"
+    ],
+    "query_type": "range"
+  },
+  "rule.mail": {
+    "description": "Rule mail",
+    "type": "boolean",
+    "nl_phrases": [
+      "rule mail",
+      "mail"
+    ],
+    "query_type": "term"
+  },
+  "rule.mitre.id": {
+    "description": "MITRE ATT&CK technique identifier",
+    "type": "keyword",
+    "nl_phrases": [
+      "mitre",
+      "att&ck",
+      "technique id",
+      "tactic"
+    ],
+    "query_type": "term"
+  },
+  "rule.mitre.tactic": {
+    "description": "MITRE ATT&CK tactic name",
+    "type": "keyword",
+    "nl_phrases": [
+      "tactic",
+      "mitre tactic"
+    ],
+    "query_type": "term"
+  },
+  "rule.mitre.technique": {
+    "description": "MITRE ATT&CK technique name",
+    "type": "keyword",
+    "nl_phrases": [
+      "mitre technique",
+      "technique"
+    ],
+    "query_type": "term"
+  },
+  "rule.nist_800_53": {
+    "description": "NIST 800-53 control associated with the rule",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule nist 800 53",
+      "nist 800 53"
+    ],
+    "query_type": "term"
+  },
+  "rule.pci_dss": {
+    "description": "PCI DSS compliance requirement associated with the rule",
+    "type": "keyword",
+    "nl_phrases": [
+      "pci dss",
+      "rule pci dss"
+    ],
+    "query_type": "term"
+  },
+  "rule.tsc": {
+    "description": "Rule tsc",
+    "type": "keyword",
+    "nl_phrases": [
+      "rule tsc",
+      "tsc"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.effective_user.id": {
+    "description": "Effective user id",
+    "type": "keyword",
+    "nl_phrases": [
+      "effective user id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.effective_user.name": {
+    "description": "Effective user name",
+    "type": "keyword",
+    "nl_phrases": [
+      "effective user name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.group.id": {
+    "description": "Group id",
+    "type": "keyword",
+    "nl_phrases": [
+      "group id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.group.name": {
+    "description": "Group name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "group name"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.login_user.id": {
+    "description": "Login user id",
+    "type": "keyword",
+    "nl_phrases": [
+      "login user id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.login_user.name": {
+    "description": "Login user name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "login user name"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.process.id": {
+    "description": "Process id",
+    "type": "keyword",
+    "nl_phrases": [
+      "process id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.process.name": {
+    "description": "Name of the process that triggered the event",
+    "type": "keyword",
+    "nl_phrases": [
+      "process name",
+      "name"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.process.ppid": {
+    "description": "Process ppid",
+    "type": "keyword",
+    "nl_phrases": [
+      "ppid",
+      "process ppid"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.user.id": {
+    "description": "User id",
+    "type": "keyword",
+    "nl_phrases": [
+      "user id",
+      "id"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.audit.user.name": {
+    "description": "User name",
+    "type": "keyword",
+    "nl_phrases": [
+      "name",
+      "user name"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.diff": {
+    "description": "Syscheck diff",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck diff",
+      "diff"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.event": {
+    "description": "FIM event type added modified deleted",
+    "type": "keyword",
+    "nl_phrases": [
+      "file event",
+      "file change",
+      "added deleted modified"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.gid_after": {
+    "description": "Syscheck gid after",
+    "type": "keyword",
+    "nl_phrases": [
+      "gid after",
+      "syscheck gid after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.gid_before": {
+    "description": "Syscheck gid before",
+    "type": "keyword",
+    "nl_phrases": [
+      "gid before",
+      "syscheck gid before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.gname_after": {
+    "description": "Syscheck gname after",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck gname after",
+      "gname after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.gname_before": {
+    "description": "Syscheck gname before",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck gname before",
+      "gname before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.hard_links": {
+    "description": "Syscheck hard links",
+    "type": "keyword",
+    "nl_phrases": [
+      "hard links",
+      "syscheck hard links"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.inode_after": {
+    "description": "Syscheck inode after",
+    "type": "keyword",
+    "nl_phrases": [
+      "inode after",
+      "syscheck inode after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.inode_before": {
+    "description": "Syscheck inode before",
+    "type": "keyword",
+    "nl_phrases": [
+      "inode before",
+      "syscheck inode before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.md5_after": {
+    "description": "MD5 hash of file after modification",
+    "type": "keyword",
+    "nl_phrases": [
+      "md5 after",
+      "syscheck md5 after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.md5_before": {
+    "description": "Syscheck md5 before",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck md5 before",
+      "md5 before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.mode": {
+    "description": "Syscheck mode",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck mode",
+      "mode"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.mtime_after": {
+    "description": "Syscheck mtime after",
+    "type": "date",
+    "nl_phrases": [
+      "date",
+      "syscheck mtime after",
+      "mtime after",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "syscheck.mtime_before": {
+    "description": "Syscheck mtime before",
+    "type": "date",
+    "nl_phrases": [
+      "mtime before",
+      "date",
+      "syscheck mtime before",
+      "time",
+      "when"
+    ],
+    "query_type": "range"
+  },
+  "syscheck.path": {
+    "description": "File path monitored by Wazuh FIM File Integrity Monitoring",
+    "type": "keyword",
+    "nl_phrases": [
+      "file path",
+      "monitored file",
+      "fim",
+      "file integrity",
+      "changed file"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.perm_after": {
+    "description": "Syscheck perm after",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck perm after",
+      "perm after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.perm_before": {
+    "description": "Syscheck perm before",
+    "type": "keyword",
+    "nl_phrases": [
+      "perm before",
+      "syscheck perm before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.sha1_after": {
+    "description": "Syscheck sha1 after",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck sha1 after",
+      "sha1 after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.sha1_before": {
+    "description": "Syscheck sha1 before",
+    "type": "keyword",
+    "nl_phrases": [
+      "sha1 before",
+      "syscheck sha1 before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.sha256_after": {
+    "description": "SHA256 hash of file after modification",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck sha256 after",
+      "sha256 after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.sha256_before": {
+    "description": "Syscheck sha256 before",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck sha256 before",
+      "sha256 before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.size_after": {
+    "description": "File size after modification in bytes",
+    "type": "long",
+    "nl_phrases": [
+      "syscheck size after",
+      "size after"
+    ],
+    "query_type": "range"
+  },
+  "syscheck.size_before": {
+    "description": "Syscheck size before",
+    "type": "long",
+    "nl_phrases": [
+      "syscheck size before",
+      "size before"
+    ],
+    "query_type": "range"
+  },
+  "syscheck.tags": {
+    "description": "Syscheck tags",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck tags",
+      "tags"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.uid_after": {
+    "description": "Syscheck uid after",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck uid after",
+      "uid after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.uid_before": {
+    "description": "Syscheck uid before",
+    "type": "keyword",
+    "nl_phrases": [
+      "uid before",
+      "syscheck uid before"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.uname_after": {
+    "description": "Syscheck uname after",
+    "type": "keyword",
+    "nl_phrases": [
+      "syscheck uname after",
+      "uname after"
+    ],
+    "query_type": "term"
+  },
+  "syscheck.uname_before": {
+    "description": "Syscheck uname before",
+    "type": "keyword",
+    "nl_phrases": [
+      "uname before",
+      "syscheck uname before"
+    ],
+    "query_type": "term"
+  },
+  "timestamp": {
+    "description": "Timestamp when the event was generated at the source",
+    "type": "date",
+    "nl_phrases": [
+      "time",
+      "when",
+      "timestamp",
+      "date"
+    ],
+    "query_type": "range"
+  },
+  "title": {
+    "description": "Title",
+    "type": "keyword",
+    "nl_phrases": [
+      "title"
+    ],
+    "query_type": "term"
+  },
+  "type": {
+    "description": "Type",
+    "type": "text",
+    "nl_phrases": [
+      "type"
+    ],
+    "query_type": "match"
+  }
+}

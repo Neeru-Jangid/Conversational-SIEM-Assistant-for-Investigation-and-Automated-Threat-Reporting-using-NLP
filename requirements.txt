@@ -1,0 +1,17 @@
+opensearch-py
+chromadb
+streamlit
+streamlit-chat
+pandas
+plotly
+jinja2
+requests
+python-dotenv
+faker
+pytest
+pytest-asyncio
+rich
+pydantic
+reportlab
+matplotlib
+python-docx
