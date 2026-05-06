@@ -138,8 +138,8 @@ python pipeline.py
 
 ## 🤝 Contributors
 
-* Your Name
-* Your Friend's Name
+* Neeru Jangid
+* Divyanshi arora
 
 ---
 
